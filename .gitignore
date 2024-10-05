@@ -1,0 +1,22 @@
+# Configuraciones del editor
+.vscode/
+.idea/
+# Archivos de respaldo y logs
+*.log
+*.bak
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+# Carpetas de compilación
+dist/
+.cache/
+# Archivos temporales de imagen
+*.tmp
+*.psd
+*.ai
+# Archivos de configuración de entorno 
+.env
+# Logs y archivos temporales
+*.log
+*.bak
+*.tmp
