@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reviews de Películas</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Reseñas</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de búsqueda -->
+        <div class="barra-buscador">
+            <input type="text" placeholder="Buscar películas, actores, géneros...">
+            <button type="button">Buscar</button>
+        </div>
+    </header>
+
+    <!-- Sección de Carrusel (Películas Destacadas) -->
+    <section class="peliculas-destacadas">
+        <h2>Películas Destacadas</h2>
+        <div class="carrusel">
+            <button class="btn-anterior">&#9664;</button>
+            <div class="contenedor-peliculas">
+                <div class="pelicula">
+                    <img src="img/pelicula1.jpg" alt="Portada Película 1">
+                    <p>Título Película 1</p>
+                </div>
+                <div class="pelicula">
+                    <img src="img/pelicula2.jpg" alt="Portada Película 2">
+                    <p>Título Película 2</p>
+                </div>
+                <!-- Añadir más películas según sea necesario -->
+            </div>
+            <button class="btn-siguiente">&#9654;</button>
+        </div>
+    </section>
+
+    <!-- Sección de Suscripción a Novedades -->
+    <section class="suscripcion">
+        <h2>¡Suscríbete a nuestras novedades!</h2>
+        <form>
+            <input type="email" placeholder="Introduce tu correo electrónico" required>
+            <button type="submit">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
