@@ -1,0 +1,23 @@
+{
+    "peliculas": [
+      {
+        "id": "1",
+        "titulo": "Inception",
+        "portada": "img/inception.jpg",
+        "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+        "genero": "Ciencia Ficción",
+        "elenco": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+        "sinopsis": "Dom Cobb es un ladrón con la rara habilidad de robar secretos valiosos del subconsciente."
+      },
+      {
+        "id": "2",
+        "titulo": "The Matrix",
+        "portada": "img/matrix.jpg",
+        "trailer": "https://www.youtube.com/watch?v=m8e-FF8MsqU",
+        "genero": "Acción, Ciencia Ficción",
+        "elenco": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        "sinopsis": "Un hacker descubre la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores."
+      }
+    ]
+  }
+  

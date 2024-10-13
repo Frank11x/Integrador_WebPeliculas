@@ -1,12 +1,54 @@
-<!--Página con las reseñas de las películas-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2</title>
+    <title>Artículo de Película</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
+    <!-- Barra de menú y búsqueda -->
+    <header>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Reseñas</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de búsqueda -->
+        <div class="barra-buscador">
+            <input type="text" id="buscar-pelicula" placeholder="Buscar película...">
+            <button type="button">Buscar</button>
+        </div>
+    </header>
+
+    <!-- Sección principal para mostrar los detalles de la película -->
+    <main class="detalle-pelicula">
+        <div class="portada">
+            <img id="portada-img" src="img/placeholder.jpg" alt="Portada de la película">
+        </div>
+
+        <div class="info-pelicula">
+            <h1 id="titulo-pelicula">Título de la Película</h1>
+            <p><a id="link-trailer" href="#" target="_blank">Ver Tráiler</a></p>
+            <p><strong>Género:</strong> <span id="genero-pelicula">Género</span></p>
+            <p><strong>Elenco:</strong> <span id="elenco-pelicula">Actores</span></p>
+        </div>
+    </main>
+
+    <!-- Sinopsis -->
+    <section class="sinopsis">
+        <h2>Sinopsis</h2>
+        <p id="sinopsis-pelicula">Aquí va la sinopsis de la película seleccionada.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/articulo.js"></script>
 </body>
 </html>
