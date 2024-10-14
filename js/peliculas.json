@@ -1,23 +1,176 @@
-{
-    "peliculas": [
-      {
-        "id": "1",
-        "titulo": "Inception",
-        "portada": "img/inception.jpg",
-        "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0",
-        "genero": "Ciencia Ficción",
-        "elenco": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
-        "sinopsis": "Dom Cobb es un ladrón con la rara habilidad de robar secretos valiosos del subconsciente."
-      },
-      {
-        "id": "2",
-        "titulo": "The Matrix",
-        "portada": "img/matrix.jpg",
-        "trailer": "https://www.youtube.com/watch?v=m8e-FF8MsqU",
-        "genero": "Acción, Ciencia Ficción",
-        "elenco": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
-        "sinopsis": "Un hacker descubre la verdadera naturaleza de su realidad y su papel en la guerra contra sus controladores."
-      }
+[  
+    [  
+    {  
+        "id": "1",  
+        "nombre": "Oppenheimer",  
+        "portada": "img/oppenheimer.jpg",  
+        "genero": ["Biografía", "Drama"],  
+        "elenco": ["Cillian Murphy", "Emily Blunt", "Matt Damon"],  
+        "trailer": "https://link_al_trailer.com/oppenheimer",  
+        "sinopsis": "La vida de J. Robert Oppenheimer, el físico detrás de la bomba atómica."  
+    },  
+    {  
+        "id": "2",  
+        "nombre": "Barbie",  
+        "portada": "img/barbie.jpg",  
+        "genero": ["Comedia", "Fantástico"],  
+        "elenco": ["Margot Robbie", "Ryan Gosling"],  
+        "trailer": "https://link_al_trailer.com/barbie",  
+        "sinopsis": "Una aventura que sigue a Barbie mientras explora el mundo real."  
+    },  
+    {  
+        "id": "3",  
+        "nombre": "Guardians of the Galaxy Vol. 3",  
+        "portada": "img/guardians3.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],  
+        "trailer": "https://link_al_trailer.com/guardians3",  
+        "sinopsis": "Los Guardianes enfrentan nuevos desafíos mientras protegen a su familia."  
+    },  
+    {  
+        "id": "4",  
+        "nombre": "John Wick: Chapter 4",  
+        "portada": "img/johnwick4.jpg",  
+        "genero": ["Acción", "Thriller"],  
+        "elenco": ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård"],  
+        "trailer": "https://link_al_trailer.com/johnwick4",  
+        "sinopsis": "John Wick enfrenta a nuevos enemigos en su búsqueda de venganza."  
+    },  
+    {  
+        "id": "5",  
+        "nombre": "The Marvels",  
+        "portada": "img/themarvels.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Brie Larson", "Teyonah Parris", "Iman Vellani"],  
+        "trailer": "https://link_al_trailer.com/themarvels",  
+        "sinopsis": "Capitana Marvel se une a otras heroínas para salvar el universo."  
+    },  
+    {  
+        "id": "6",  
+        "nombre": "Dune: Part Two",  
+        "portada": "img/dune2.jpg",  
+        "genero": ["Ciencia Ficción", "Aventura"],  
+        "elenco": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],  
+        "trailer": "https://link_al_trailer.com/dune2",  
+        "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."  
+    },  
+    {  
+        "id": "7",  
+        "nombre": "Killers of the Flower Moon",  
+        "portada": "img/killers.jpg",  
+        "genero": ["Crimen", "Drama"],  
+        "elenco": ["Leonardo DiCaprio", "Robert De Niro"],  
+        "trailer": "https://link_al_trailer.com/killers",  
+        "sinopsis": "Un cuento verdadero sobre los asesinatos en la nación Osage."  
+    },  
+    {  
+        "id": "8",  
+        "nombre": "Fast X",  
+        "portada": "img/fastx.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Vin Diesel", "Michelle Rodriguez"],  
+        "trailer": "https://link_al_trailer.com/fastx",  
+        "sinopsis": "La familia Toretto enfrenta una nueva amenaza y viaja por el mundo."  
+    },  
+    {  
+        "id": "9",  
+        "nombre": "Spider-Man: Across the Spider-Verse",  
+        "portada": "img/spiderman2.jpg",  
+        "genero": ["Animación", "Acción"],  
+        "elenco": ["Shameik Moore", "Hailee Steinfeld"],  
+        "trailer": "https://link_al_trailer.com/spiderman2",  
+        "sinopsis": "Miles Morales se aventurará a nuevos universos con más Spider-People."  
+    },  
+    {  
+        "id": "10",  
+        "nombre": "Elemental",  
+        "portada": "img/elemental.jpg",  
+        "genero": ["Animación", "Comedia"],  
+        "elenco": ["Leah Lewis", "Mamoudou Athie"],  
+        "trailer": "https://link_al_trailer.com/elemental",  
+        "sinopsis": "En un mundo donde los elementos son personas, una chispa inesperada se enciende."  
+    },  
+    {  
+        "id": "11",  
+        "nombre": "Mission: Impossible – Dead Reckoning Part One",  
+        "portada": "img/missionimpossible7.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Tom Cruise", "Hayley Atwell"],  
+        "trailer": "https://link_al_trailer.com/missionimpossible7",  
+        "sinopsis": "Ethan Hunt y su equipo se enfrentan a una nueva amenaza que pone en peligro el mundo."  
+    },  
+    {  
+        "id": "12",  
+        "nombre": "The Hunger Games: The Ballad of Songbirds and Snakes",  
+        "portada": "img/hungergames.jpg",  
+        "genero": ["Aventura", "Drama"],  
+        "elenco": ["Tom Blyth", "Rachel Zegler"],  
+        "trailer": "https://link_al_trailer.com/hungergames",  
+        "sinopsis": "Historia de los orígenes de los Juegos del Hambre, centrándose en un joven Snow."  
+    },  
+    {  
+        "id": "13",  
+        "nombre": "Napoleon",  
+        "portada": "img/napoleon.jpg",  
+        "genero": ["Historia", "Drama"],  
+        "elenco": ["Joaquin Phoenix", "Vanessa Kirby"],  
+        "trailer": "https://link_al_trailer.com/napoleon",  
+        "sinopsis": "La vida del famoso conquistador Napoleon Bonaparte."  
+    },  
+    {  
+        "id": "14",  
+        "nombre": "Aquaman and the Lost Kingdom",  
+        "portada": "img/aquaman2.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Jason Momoa", "Patrick Wilson"],  
+        "trailer": "https://link_al_trailer.com/aquaman2",  
+        "sinopsis": "Aquaman regresa para salvar su reino de una nueva amenaza."  
+    },  
+    {  
+        "id": "15",  
+        "nombre": "The Exorcist: Believer",  
+        "portada": "img/exorcist.jpg",  
+        "genero": ["Horror", "Suspenso"],  
+        "elenco": ["Leslie Odom Jr.", "Ann Dowd"],  
+        "trailer": "https://link_al_trailer.com/exorcist",  
+        "sinopsis": "Una nueva historia de posesiones y exorcismos que aterroriza a las familias."  
+    },  
+    {  
+        "id": "16",  
+        "nombre": "Furiosa",  
+        "portada": "img/furiosa.jpg",  
+        "genero": ["Acción", "Aventura"],  
+        "elenco": ["Anya Taylor-Joy", "Chris Hemsworth"],  
+        "trailer": "https://link_al_trailer.com/furiosa",  
+        "sinopsis": "Una historia de los orígenes del personaje Furiosa en un mundo postapocalíptico."  
+    },  
+    {  
+        "id": "17",  
+        "nombre": "The Marvels",  
+        "portada": "img/themarvels.jpg",  
+        "genero": ["Acción", "Ciencia ficción"],  
+        "elenco": ["Brie Larson", "Iman Vellani"],  
+        "trailer": "https://link_al_trailer.com/themarvels",  
+        "sinopsis": "Cuando la realidad se descontrola, las heroínas tendrán que colaborar."  
+    },  
+    {  
+        "id": "18",  
+        "nombre": "Wonka",  
+        "portada": "img/wonka.jpg",  
+        "genero": ["Fantástico", "Musical"],  
+        "elenco": ["Timothée Chalamet", "Olivia Colman"],  
+        "trailer": "https://link_al_trailer.com/wonka",  
+        "sinopsis": "El origen del famoso chocolatero Willy Wonka y sus primeras aventuras."  
+    },  
+    {  
+        "id": "19",  
+        "nombre": "Killers of the Flower Moon",  
+        "portada": "img/killers_flowers.jpg",  
+        "genero": ["Crimen", "Drama"],  
+        "elenco": ["Leonardo DiCaprio", "Lily Gladstone"],  
+        "trailer": "https://link_alt_trailer.com/killers_flowers",  
+        "sinopsis": "Una historia real sobre los asesinatos en la nación Osage y la investigación del FBI."  
+    }  
     ]
-  }
-  
+
+]

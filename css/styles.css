@@ -1,0 +1,87 @@
+/* Estilos generales */  
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    flex-direction: column; /* Permitir que el footer siempre esté al final */  
+    height: 100vh; /* Altura total de la ventana de visualización */  
+}  
+
+/* Estilos del encabezado y menú de navegación */  
+header {  
+    background-color: black; /* Fondo negro para el menú */  
+    color: white; /* Color blanco para el texto */  
+    padding: 10px 0; /* Espaciado superior e inferior */  
+}  
+
+.menu-navegacion ul {  
+    list-style-type: none; /* Quita los puntos de la lista */  
+    padding: 0; /* Quita el padding */  
+    margin: 0; /* Quita el margin */  
+    display: flex; /* Muestra los elementos en fila */  
+    justify-content: center; /* Centra los elementos horizontalmente */  
+}  
+
+.menu-navegacion li {  
+    margin: 0 20px; /* Espaciado entre elementos del menú */  
+}  
+
+.menu-navegacion a {  
+    color: white; /* Color blanco para los enlaces */  
+    text-decoration: none; /* Quita el subrayado */  
+    font-weight: bold; /* Letras en negrita */  
+}  
+
+.menu-navegacion a:hover {  
+    text-decoration: underline; /* Subrayado cuando se pasa el puntero */  
+}  
+
+/* Estilos de la barra de búsqueda */  
+.barra-buscador {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 15px; /* Espaciado interno */  
+    text-align: center; /* Centra el contenido */  
+    margin: 0; /* Quita el margen para que no haya espacio inferior */  
+}  
+
+/* Estilos de las películas destacadas */  
+.peliculas-destacadas {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 200px; /* Espaciado interno */  
+    margin: 0; /* Quita el margen para que no haya espacio superior */  
+    text-align: center; /* Centra el contenido */  
+}  
+
+/* Estilos de la sección de suscripción */  
+.suscripcion {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    border-top: 2px solid black; /* Línea negra que corta la sección */  
+    padding: 20px; /* Espaciado interno */  
+    text-align: center; /* Centra el contenido */  
+}  
+
+/* Estilos para el pie de página */  
+footer {  
+    text-align: center;  
+    padding: 10px 0;  
+    background-color: black; /* Fondo negro para el pie de página */  
+    color: white; /* Color blanco para el texto */  
+}  
+
+/* Nuevo contenedor para el mensaje de error */  
+.contenedor-mensaje-error {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 250px 20px; /* Espaciado interno */  
+    margin: 0 30px; /* con margen a los costados*/ 
+    text-align: center; /* Centrar contenido */  
+}  
+
+/* Estilos para el mensaje de error en la búsqueda */  
+.mensaje-error {  
+    border: 2px solid red; /* Borde rojo */  
+    color: red; /* Texto en rojo */  
+    padding: 20px; /* Espaciado interno */  
+    margin: 0 30px; /* con margen a los costados*/ 
+    text-align: center; /* Centrar contenido */  
+}

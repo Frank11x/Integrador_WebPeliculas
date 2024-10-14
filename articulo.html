@@ -1,54 +1,85 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artículo de Película</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <!-- Barra de menú y búsqueda -->
-    <header>
-        <nav class="menu-navegacion">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Reseñas</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Detalle de la Película</title>  
+    <link rel="stylesheet" href="css/styles.css">  
+</head>  
+<body>  
+    <!-- Encabezado con el menú de navegación -->  
+    <header>  
+        <nav class="menu-navegacion">  
+            <ul>  
+                <li><a href="index.html">Inicio</a></li>  
+                <li><a href="busqueda.html">Buscar</a></li>  
+                <li><a href="suscripcion.html">Suscribirse</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
 
-        <!-- Barra de búsqueda -->
-        <div class="barra-buscador">
-            <input type="text" id="buscar-pelicula" placeholder="Buscar película...">
-            <button type="button">Buscar</button>
-        </div>
-    </header>
+    <!-- Sección de Detalle de la Película -->  
+    <div class="detalle-pelicula" style="background-color: #e0f7fa; padding: 20px;">  
+        <div class="contenedor-detalle" style="display: flex;">  
+            <!-- Portada de la película -->  
+            <div class="portada" style="flex: 30%;">  
+                <img id="portadaPelicula" src="" alt="Portada de la Película" style="width: 100%; height: auto;">  
+            </div>  
 
-    <!-- Sección principal para mostrar los detalles de la película -->
-    <main class="detalle-pelicula">
-        <div class="portada">
-            <img id="portada-img" src="img/placeholder.jpg" alt="Portada de la película">
-        </div>
+            <!-- Detalles de la película -->  
+            <div class="info-pelicula" style="flex: 70%; padding-left: 20px;">  
+                <h2 id="nombrePelicula"></h2>  
+                <p><strong>Nombre:</strong> <span id="nombrePelicula"></span></p>
+                <p><strong>Género:</strong> <span id="generoPelicula"></span></p>  
+                <p><strong>Elenco:</strong> <span id="elencoPelicula"></span></p>  
+                <p><strong>Tráiler:</strong> <a id="trailerPelicula" href="" target="_blank">Ver Tráiler</a></p>  
+            </div>  
+        </div>  
 
-        <div class="info-pelicula">
-            <h1 id="titulo-pelicula">Título de la Película</h1>
-            <p><a id="link-trailer" href="#" target="_blank">Ver Tráiler</a></p>
-            <p><strong>Género:</strong> <span id="genero-pelicula">Género</span></p>
-            <p><strong>Elenco:</strong> <span id="elenco-pelicula">Actores</span></p>
-        </div>
-    </main>
+        <!-- Sinopsis de la película -->  
+        <div class="sinopsis" style="margin-top: 20px;">  
+            <h3>Sinopsis</h3>  
+            <p id="sinopsisPelicula"></p>  
+        </div>  
+    </div>  
 
-    <!-- Sinopsis -->
-    <section class="sinopsis">
-        <h2>Sinopsis</h2>
-        <p id="sinopsis-pelicula">Aquí va la sinopsis de la película seleccionada.</p>
-    </section>
+    <!-- Sección de Suscripción -->  
+    <div class="suscripcion">  
+        <h2>¡Suscríbete a nuestro boletín!</h2>  
+        <form action="/suscripcion" method="POST">  
+            <input type="email" placeholder="Tu correo electrónico" required>  
+            <button type="submit">Suscribirse</button>  
+        </form>  
+    </div>  
 
-    <footer>
-        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Pie de página -->  
+    <footer>  
+        <p>&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>  
+    </footer>  
 
-    <script src="js/articulo.js"></script>
-</body>
+    <!-- JavaScript para cargar datos de la película desde un JSON -->  
+    <script>  
+        const urlParams = new URLSearchParams(window.location.search);  
+        const movieId = urlParams.get('id'); // Suponiendo que pasamos un ID de película en la URL  
+        
+        fetch(` peliculas.json`) // Aquí puedes cambiar la ruta según tu estructura  
+            .then(response => response.json())  
+            .then(data => {  
+                const pelicula = data.find(p => p.id === movieId); // Busca la película por ID  
+
+                if (pelicula) {  
+                    document.getElementById('portadaPelicula').src = pelicula.portada;  
+                    document.getElementById('nombrePelicula').innerText = pelicula.nombre;  
+                    document.getElementById('generoPelicula').innerText = pelicula.genero.join(', ');  
+                    document.getElementById('elencoPelicula').innerText = pelicula.elenco.join(', ');  
+                    document.getElementById('trailerPelicula').href = pelicula.trailer;  
+                    document.getElementById('sinopsisPelicula').innerText = pelicula.sinopsis;  
+                } else {  
+                    console.error('Película no encontrada.');  
+                }  
+            })  
+            .catch(error => console.error('Error al cargar los datos de la película:', error));  
+    </script>  
+
+</body>  
 </html>
