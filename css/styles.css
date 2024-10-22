@@ -98,7 +98,7 @@ footer {
 }
 
 .peliculas-recomendadas .contenedor-carousel {
-    width: 50%; /* Ancho reducido a 50% */
+    width: 20%; /* Ancho reducido a 50% */
     padding: 10px 0; /* Ajustado */
     overflow: hidden;
     scroll-behavior: smooth;
@@ -117,7 +117,7 @@ footer {
     width: 30px; /* Ajustado para menos ancho */
     color: #fff;
     cursor: pointer;
-    z-index: 500;
+    z-index: 0;
     transition: .2s ease all;
 }
 
@@ -127,11 +127,11 @@ footer {
 }
 
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda {
-    left: 305px; /* Distancia desde el borde ajustada */
+    left: 505px; /* Distancia desde el borde ajustada */
 }
 
 .peliculas-recomendadas .contenedor-principal .flecha-derecha {
-    right: 305px; /* Distancia desde el borde ajustada */
+    right: 505px; /* Distancia desde el borde ajustada */
 }
 
 .peliculas-recomendadas .contenedor-carousel .carousel {
