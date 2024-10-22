@@ -85,3 +85,131 @@ footer {
     margin: 0 30px; /* con margen a los costados*/ 
     text-align: center; /* Centrar contenido */  
 }
+/* ---- ----- ----- Carrusel ----- ----- ----- */
+.peliculas-recomendadas {
+    margin-bottom: 10px; /* Ajustado para mover más arriba */
+}
+
+.peliculas-recomendadas .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center; /* Centra el contenedor principal */
+}
+
+.peliculas-recomendadas .contenedor-carousel {
+    width: 50%; /* Ancho reducido a 50% */
+    padding: 10px 0; /* Ajustado */
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background: transparent; /* Sin fondo */
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 1.4em; /* Tamaño adaptable */
+    height: 50%;
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Centrado vertical */
+    width: 30px; /* Ajustado para menos ancho */
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 305px; /* Distancia desde el borde ajustada */
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 305px; /* Distancia desde el borde ajustada */
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+    flex: 1 0 30%; /* Mostrar 3 películas */
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    margin: 0 5px; /* Espacio entre películas reducido */
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    height: auto; /* Mantener proporción de imagen */
+    vertical-align: top;
+}
+
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%; /* Ajustado al tamaño del carrusel */
+    margin: 0 auto; /* Centra el título */
+}
+
+.contenedor-titulo-controles h3 {
+    color: #000000;
+    font-size: 24px; /* Ajustar el tamaño del título */
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 8px; /* Ajustado para que sea más pequeño */
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: red;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+    .peliculas-recomendadas .contenedor-carousel {
+        overflow: visible;
+        width: 70%; /* Ajustar el ancho para pantallas más pequeñas */
+    }
+
+    .peliculas-recomendadas .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px; /* Ajustado */
+    }
+
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+        flex: 1 0 40%; /* Ajustar a 40% en pantallas pequeñas */
+    }
+
+    .contenedor-titulo-controles h3 {
+        font-size: 20px; /* Ajustar el tamaño del título para pantallas pequeñas */
+    }
+}
