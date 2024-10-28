@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             // Buscar la película seleccionada usando el ID
-            const pelicula = data.peliculas.find(p => p.id === peliculaId);
+            const pelicula = data.find(p => p.id === peliculaId);
 
             if (pelicula) {
                 // Actualizar el contenido de la página con la información de la película
-                document.getElementById('titulo-pelicula').textContent = pelicula.titulo;
+                document.getElementById('titulo-pelicula').textContent = pelicula.nombre;
                 document.getElementById('portada-img').src = pelicula.portada;
                 document.getElementById('link-trailer').href = pelicula.trailer;
-                document.getElementById('genero-pelicula').textContent = pelicula.genero;
-                document.getElementById('elenco-pelicula').textContent = pelicula.elenco;
+                document.getElementById('genero-pelicula').textContent = pelicula.genero.join(', '); // Convertir array a string
+                document.getElementById('elenco-pelicula').textContent = pelicula.elenco.join(', '); // Convertir array a string
                 document.getElementById('sinopsis-pelicula').textContent = pelicula.sinopsis;
             } else {
                 alert('No se encontró la película seleccionada.');

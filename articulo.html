@@ -1,85 +1,103 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Detalle de la Película</title>  
-    <link rel="stylesheet" href="css/styles.css">  
-</head>  
-<body>  
-    <!-- Encabezado con el menú de navegación -->  
-    <header>  
-        <nav class="menu-navegacion">  
-            <ul>  
-                <li><a href="index.html">Inicio</a></li>  
-                <li><a href="busqueda.html">Buscar</a></li>  
-                <li><a href="suscripcion.html">Suscribirse</a></li>  
-            </ul>  
-        </nav>  
-    </header>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Película</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="suscripcion.html">Suscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Sección de Detalle de la Película -->  
-    <div class="detalle-pelicula" style="background-color: #e0f7fa; padding: 20px;">  
-        <div class="contenedor-detalle" style="display: flex;">  
-            <!-- Portada de la película -->  
-            <div class="portada" style="flex: 30%;">  
-                <img id="portadaPelicula" src="" alt="Portada de la Película" style="width: 100%; height: auto;">  
-            </div>  
+    <!-- Sección de Detalle de la Película -->
+    <div class="detalle-pelicula">
+        <div class="contenedor-detalle">
+            <!-- Portada de la película -->
+            <div class="portada">
+                <img id="portadaPelicula" src="" alt="Portada de la Película" style="width: 100%; height: auto;">
+            </div>
 
-            <!-- Detalles de la película -->  
-            <div class="info-pelicula" style="flex: 70%; padding-left: 20px;">  
-                <h2 id="nombrePelicula"></h2>  
-                <p><strong>Nombre:</strong> <span id="nombrePelicula"></span></p>
-                <p><strong>Género:</strong> <span id="generoPelicula"></span></p>  
-                <p><strong>Elenco:</strong> <span id="elencoPelicula"></span></p>  
-                <p><strong>Tráiler:</strong> <a id="trailerPelicula" href="" target="_blank">Ver Tráiler</a></p>  
-            </div>  
-        </div>  
+            <!-- Detalles de la película -->
+            <div class="info-pelicula">
+                <h2 id="nombrePelicula"></h2>
+                <p><strong>Género:</strong> <span id="generoPelicula"></span></p>
+                <p><strong>Elenco:</strong> <span id="elencoPelicula"></span></p>
+                <p><strong>Tráiler:</strong> <a id="trailerPelicula" href="" target="_blank">Ver Tráiler</a></p>
+            </div>
+        </div>
 
-        <!-- Sinopsis de la película -->  
-        <div class="sinopsis" style="margin-top: 20px;">  
-            <h3>Sinopsis</h3>  
-            <p id="sinopsisPelicula"></p>  
-        </div>  
-    </div>  
+        <!-- Sinopsis de la película -->
+        <div class="sinopsis">
+            <h3>Sinopsis</h3>
+            <p id="sinopsisPelicula"></p>
+        </div>
+    </div>
 
-    <!-- Sección de Suscripción -->  
-    <div class="suscripcion">  
-        <h2>¡Suscríbete a nuestro boletín!</h2>  
-        <form action="/suscripcion" method="POST">  
-            <input type="email" placeholder="Tu correo electrónico" required>  
-            <button type="submit">Suscribirse</button>  
-        </form>  
-    </div>  
+    <!-- Sección de Suscripción -->
+    <div class="suscripcion">
+        <h2>¡Suscríbete a nuestro boletín!</h2>
+        <form action="/suscripcion" method="POST" onsubmit="manejarSuscripcion(event)">
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+    </div>
 
-    <!-- Pie de página -->  
-    <footer>  
-        <p>&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>  
-    </footer>  
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>
+    </footer>
 
-    <!-- JavaScript para cargar datos de la película desde un JSON -->  
-    <script>  
-        const urlParams = new URLSearchParams(window.location.search);  
-        const movieId = urlParams.get('id'); // Suponiendo que pasamos un ID de película en la URL  
-        
-        fetch(` peliculas.json`) // Aquí puedes cambiar la ruta según tu estructura  
-            .then(response => response.json())  
-            .then(data => {  
-                const pelicula = data.find(p => p.id === movieId); // Busca la película por ID  
+    <!-- JavaScript para cargar datos de la película desde un JSON -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id'); // Suponiendo que pasamos un ID de película en la URL
 
-                if (pelicula) {  
-                    document.getElementById('portadaPelicula').src = pelicula.portada;  
-                    document.getElementById('nombrePelicula').innerText = pelicula.nombre;  
-                    document.getElementById('generoPelicula').innerText = pelicula.genero.join(', ');  
-                    document.getElementById('elencoPelicula').innerText = pelicula.elenco.join(', ');  
-                    document.getElementById('trailerPelicula').href = pelicula.trailer;  
-                    document.getElementById('sinopsisPelicula').innerText = pelicula.sinopsis;  
-                } else {  
-                    console.error('Película no encontrada.');  
-                }  
-            })  
-            .catch(error => console.error('Error al cargar los datos de la película:', error));  
-    </script>  
+        fetch('js/peliculas.json')
+            .then(respuesta => respuesta.json())
+            .then(datos => {
+                const pelicula = datos.find(p => p.id === movieId);
 
-</body>  
+                if (pelicula) {
+                    document.getElementById('portadaPelicula').src = pelicula.portada;
+                    document.getElementById('nombrePelicula').innerText = pelicula.nombre;
+                    document.getElementById('generoPelicula').innerText = pelicula.genero.join(', ');
+                    document.getElementById('elencoPelicula').innerText = pelicula.elenco.join(', ');
+                    document.getElementById('trailerPelicula').href = pelicula.trailer;
+                    document.getElementById('sinopsisPelicula').innerText = pelicula.sinopsis;
+                } else {
+                    console.error('Película no encontrada.');
+                }
+            })
+            .catch(error => console.error('Error al cargar los datos de la película:', error));
+
+        // Función para manejar la suscripción
+        function manejarSuscripcion(evento) {
+            evento.preventDefault();
+            const inputCorreo = document.getElementById("email");
+            const correo = inputCorreo.value;
+
+            if (validarCorreo(correo)) {
+                alert("¡Gracias por suscribirte con el correo " + correo + "!");
+                inputCorreo.value = '';
+            } else {
+                alert("Por favor, ingresa un correo electrónico válido.");
+            }
+        }
+
+        // Validar el formato del correo electrónico
+        function validarCorreo(correo) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(String(correo).toLowerCase());
+        }
+    </script>
+</body>
 </html>

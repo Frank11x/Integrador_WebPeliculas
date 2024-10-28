@@ -1,87 +1,87 @@
-/* Estilos generales */  
+/* Estilos generales */
 body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-    display: flex;  
-    flex-direction: column; /* Permitir que el footer siempre esté al final */  
-    height: 100vh; /* Altura total de la ventana de visualización */  
+    font-family: Arial, sans-serif;  /* Define la fuente principal para el texto */
+    margin: 0;                       /* Elimina el margen exterior del cuerpo de la página */
+    padding: 0;                      /* Elimina el relleno interno del cuerpo de la página */
+    display: flex;                   /* Configura el cuerpo como un contenedor flexible */
+    flex-direction: column;          /* Coloca los elementos hijos en una columna */
+    height: 100vh;                   /* Ajusta la altura del cuerpo al 100% de la ventana */
 }  
 
-/* Estilos del encabezado y menú de navegación */  
+/* Estilos del encabezado y menú de navegación */
 header {  
-    background-color: black; /* Fondo negro para el menú */  
-    color: white; /* Color blanco para el texto */  
-    padding: 10px 0; /* Espaciado superior e inferior */  
+    background-color: black;         /* Color de fondo del encabezado */
+    color: white;                    /* Color del texto en el encabezado */
+    padding: 10px 0;                 /* Rellena la parte superior e inferior del encabezado */
 }  
 
 .menu-navegacion ul {  
-    list-style-type: none; /* Quita los puntos de la lista */  
-    padding: 0; /* Quita el padding */  
-    margin: 0; /* Quita el margin */  
-    display: flex; /* Muestra los elementos en fila */  
-    justify-content: center; /* Centra los elementos horizontalmente */  
+    list-style-type: none;           /* Elimina el estilo de viñeta en la lista */
+    padding: 0;                      /* Elimina el relleno interno del menú */
+    margin: 0;                       /* Elimina el margen del menú */
+    display: flex;                   /* Coloca los elementos del menú en una fila */
+    justify-content: center;         /* Centra los elementos del menú horizontalmente */
 }  
 
 .menu-navegacion li {  
-    margin: 0 20px; /* Espaciado entre elementos del menú */  
+    margin: 0 20px;                  /* Agrega espacio entre cada elemento del menú */
 }  
 
 .menu-navegacion a {  
-    color: white; /* Color blanco para los enlaces */  
-    text-decoration: none; /* Quita el subrayado */  
-    font-weight: bold; /* Letras en negrita */  
+    color: white;                    /* Define el color del texto de los enlaces del menú */
+    text-decoration: none;           /* Elimina el subrayado en los enlaces */
+    font-weight: bold;               /* Hace que el texto de los enlaces sea negrita */
 }  
 
 .menu-navegacion a:hover {  
-    text-decoration: underline; /* Subrayado cuando se pasa el puntero */  
+    text-decoration: underline;      /* Subraya el texto de los enlaces al pasar el mouse */
 }  
 
-/* Estilos de la barra de búsqueda */  
+/* Barra de búsqueda */
 .barra-buscador {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 15px; /* Espaciado interno */  
-    text-align: center; /* Centra el contenido */  
-    margin: 0; /* Quita el margen para que no haya espacio inferior */  
+    background-color: #ADD8E6;       /* Define el color de fondo de la barra de búsqueda */
+    padding: 15px;                   /* Agrega relleno alrededor del contenido de la barra */
+    text-align: center;              /* Centra el contenido de la barra de búsqueda */
+    margin: 0;                       /* Elimina el margen exterior de la barra */
 }  
 
-/* Estilos de las películas destacadas */  
+/* Sección de películas destacadas */
 .peliculas-destacadas {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 200px; /* Espaciado interno */  
-    margin: 0; /* Quita el margen para que no haya espacio superior */  
-    text-align: center; /* Centra el contenido */  
+    background-color: #ADD8E6;       /* Color de fondo de la sección de películas destacadas */
+    padding: 200px;                  /* Agrega un espacio grande alrededor del contenido */
+    margin: 0;                       /* Elimina el margen exterior de la sección */
+    text-align: center;              /* Centra el texto y el contenido de la sección */
 }  
 
-/* Estilos de la sección de suscripción */  
+/* Sección de suscripción */
 .suscripcion {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    border-top: 2px solid black; /* Línea negra que corta la sección */  
-    padding: 20px; /* Espaciado interno */  
-    text-align: center; /* Centra el contenido */  
+    background-color: #ADD8E6;       /* Color de fondo de la sección de suscripción */
+    border-top: 2px solid black;     /* Agrega una línea negra en la parte superior */
+    padding: 20px;                   /* Rellena la sección para separar el contenido del borde */
+    text-align: center;              /* Centra el contenido de la sección */
 }  
 
-/* Estilos para el pie de página */  
+/* Pie de página */
 footer {  
-    text-align: center;  
-    padding: 10px 0;  
-    background-color: black; /* Fondo negro para el pie de página */  
-    color: white; /* Color blanco para el texto */  
+    text-align: center;              /* Centra el texto dentro del pie de página */
+    padding: 10px 0;                 /* Agrega espacio en la parte superior e inferior */
+    background-color: black;         /* Color de fondo del pie de página */
+    color: white;                    /* Color del texto en el pie de página */
 }  
 
-/* Nuevo contenedor para el mensaje de error */  
+/* Contenedor para el mensaje de error */
 .contenedor-mensaje-error {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 250px 20px; /* Espaciado interno */  
-    margin: 0 30px; /* con margen a los costados*/ 
-    text-align: center; /* Centrar contenido */  
+    background-color: #ADD8E6;       /* Define el color de fondo del contenedor de error */
+    padding: 250px 20px;             /* Agrega espacio grande en todos los lados del contenedor */
+    margin: 0 30px;                  /* Agrega margen en los lados izquierdo y derecho */
+    text-align: center;              /* Centra el contenido dentro del contenedor */
 }  
 
-/* Estilos para el mensaje de error en la búsqueda */  
+/* Estilos para el mensaje de error */
 .mensaje-error {  
-    border: 2px solid red; /* Borde rojo */  
-    color: red; /* Texto en rojo */  
-    padding: 20px; /* Espaciado interno */  
-    margin: 0 30px; /* con margen a los costados*/ 
-    text-align: center; /* Centrar contenido */  
-}
+    border: 2px solid red;           /* Define un borde rojo alrededor del mensaje de error */
+    color: red;                      /* Color del texto del mensaje de error */
+    padding: 20px;                   /* Rellena el mensaje de error para separar el texto del borde */
+    margin: 0 30px;                  /* Agrega margen en los lados izquierdo y derecho */
+    text-align: center;              /* Centra el texto dentro del mensaje de error */
+}  

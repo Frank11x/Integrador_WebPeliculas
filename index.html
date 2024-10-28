@@ -1,70 +1,72 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Reviews de Películas</title>  
-    <link rel="stylesheet" href="css/styles.css">  
-</head>  
-<body>  
-    <!-- Banner -->  
-    <div class="banner">  
-        <img src="img/banner.jpg" alt="Banner" style="width: 100%; height: auto;">  
-    </div>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Películas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="img/banner.jpg" alt="Banner de Reseñas de Películas" style="width: 100%; height: auto;">
+    </div>
 
-    <!-- Encabezado con el menú de navegación -->  
-    <header>  
-        <nav class="menu-navegacion">  
-            <ul>  
-                <li><a href="index.html">Inicio</a></li>  
-                <li><a href="reseñas.html">Reseñas</a></li>  
-                <li><a href="novedades.html">Novedades</a></li>  
-                <li><a href="contacto.html">Contacto</a></li>  
-            </ul>  
-        </nav>  
-    </header>  
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <nav class="menu-navegacion" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Barra de búsqueda -->  
-    <div class="barra-buscador">  
-        <input type="text" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">  
-        <button type="button">Buscar</button>  
+    <!-- Barra de búsqueda -->
+    <div class="barra-buscador">
+        <label for="busqueda" class="visually-hidden">Buscar en el sitio</label>
+        <input type="text" id="busqueda" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">
+        <button type="button">Buscar</button>
     </div>   
 
-    <!-- Sección de Carrusel (Películas Destacadas) -->  
-    <section class="peliculas-destacadas">  
-        <h2>Películas Destacadas</h2>  
-        <div class="carrusel">  
-            <button class="btn-anterior" aria-label="Anterior">&#9664;</button>  
-            <div class="contenedor-peliculas">  
-                <div class="pelicula">  
-                    <img src="img/pelicula1.jpg" alt="Portada Película 1">  
-                    <p>Título Película 1</p>  
-                </div>  
-                <div class="pelicula">  
-                    <img src="img/pelicula2.jpg" alt="Portada Película 2">  
-                    <p>Título Película 2</p>  
-                </div>  
-                <!-- Añadir más películas según sea necesario -->  
-            </div>  
-            <button class="btn-siguiente" aria-label="Siguiente">&#9654;</button>  
-        </div>  
-    </section>  
+    <!-- Sección de Carrusel (Películas Destacadas) -->
+    <section class="peliculas-destacadas" aria-labelledby="titulo-peliculas-destacadas">
+        <h2 id="titulo-peliculas-destacadas">Películas Destacadas</h2>
+        <div class="carrusel">
+            <button class="btn-anterior" aria-label="Anterior">&#9664;</button>
+            <div class="contenedor-peliculas">
+                <div class="pelicula">
+                    <img src="img/pelicula1.jpg" alt="Portada de Película 1">
+                    <p>Título Película 1</p>
+                </div>
+                <div class="pelicula">
+                    <img src="img/pelicula2.jpg" alt="Portada de Película 2">
+                    <p>Título Película 2</p>
+                </div>
+                <!-- Añadir más películas según sea necesario -->
+            </div>
+            <button class="btn-siguiente" aria-label="Siguiente">&#9654;</button>
+        </div>
+    </section>
 
-    <!-- Sección de Suscripción a Novedades -->  
-    <section class="suscripcion">  
-        <h2>¡Suscríbete a nuestras novedades!</h2>  
-        <form id="formSuscripcion" onsubmit="return manejarSuscripcion(event);">  
-            <input type="email" placeholder="Introduce tu correo electrónico" required>  
-            <button type="submit">Suscribirme</button>  
-        </form>  
-    </section>  
+    <!-- Sección de Suscripción a Novedades -->
+    <section class="suscripcion" aria-labelledby="titulo-suscripcion">
+        <h2 id="titulo-suscripcion">¡Suscríbete a nuestras novedades!</h2>
+        <form id="formularioSuscripcion" onsubmit="return manejarSuscripcion(event);">
+            <label for="correo" class="visually-hidden">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="Introduce tu correo electrónico" required>
+            <button type="submit">Suscribirme</button>
+        </form>
+    </section>
 
-    <!-- Pie de página -->  
-    <footer>  
-        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>  
-    </footer>  
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Reseñas de Películas. Todos los derechos reservados.</p>
+    </footer>
 
-    <!-- Enlace al archivo JavaScript -->  
-    <script src="js/main.js"></script>  
-</body>  
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
