@@ -2,7 +2,7 @@
     {
         "id": "1",
         "nombre": "Deadpool 3",
-        "portada": "img/deadpool3.jpg",
+        "portada": "img/Deadpool_3.jpg",
         "genero": ["Acción", "Comedia"],
         "elenco": ["Ryan Reynolds", "Hugh Jackman"],
         "trailer": "https://link_al_trailer.com/deadpool3",
@@ -14,7 +14,7 @@
     {
         "id": "2",
         "nombre": "The Marvels",
-        "portada": "img/themarvels.jpg",
+        "portada": "img/The_Marvels.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Brie Larson", "Teyonah Parris"],
         "trailer": "https://link_al_trailer.com/themarvels",
@@ -26,7 +26,7 @@
     {
         "id": "3",
         "nombre": "Madame Web",
-        "portada": "img/madameweb.jpg",
+        "portada": "img/Madame_Web.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Dakota Johnson", "Sydney Sweeney"],
         "trailer": "https://link_al_trailer.com/madameweb",
@@ -38,7 +38,7 @@
     {
         "id": "4",
         "nombre": "Furiosa",
-        "portada": "img/furiosa.jpg",
+        "portada": "img/Furiosa.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Anya Taylor-Joy", "Chris Hemsworth"],
         "trailer": "https://link_al_trailer.com/furiosa",
@@ -50,7 +50,7 @@
     {
         "id": "5",
         "nombre": "Avatar 3",
-        "portada": "img/avatar3.jpg",
+        "portada": "img/avatar_3.jpg",
         "genero": ["Ciencia Ficción", "Aventura"],
         "elenco": ["Zoe Saldana", "Sam Worthington"],
         "trailer": "https://link_al_trailer.com/avatar3",
@@ -62,7 +62,7 @@
     {
         "id": "6",
         "nombre": "Inside Out 2",
-        "portada": "img/insideout2.jpg",
+        "portada": "img/Elemental.jpg",
         "genero": ["Animación", "Comedia"],
         "elenco": ["Amy Poehler", "Phyllis Smith"],
         "trailer": "https://link_al_trailer.com/insideout2",
@@ -74,7 +74,7 @@
     {
         "id": "7",
         "nombre": "Kung Fu Panda 4",
-        "portada": "img/kungfupanda4.jpg",
+        "portada": "img/Kung_Fu_Panda_4.jpg",
         "genero": ["Animación", "Aventura"],
         "elenco": ["Jack Black", "Dustin Hoffman"],
         "trailer": "https://link_al_trailer.com/kungfupanda4",
@@ -86,7 +86,7 @@
     {
         "id": "8",
         "nombre": "Transformers: One",
-        "portada": "img/transformersone.jpg",
+        "portada": "img/Transformers_One.jpg",
         "genero": ["Acción", "Ciencia Ficción"],
         "elenco": ["Chris Hemsworth", "Micheal Cera"],
         "trailer": "https://link_al_trailer.com/transformersone",
@@ -98,7 +98,7 @@
     {
         "id": "9",
         "nombre": "Trolls Band Together",
-        "portada": "img/trolls3.jpg",
+        "portada": "img/Trolls_Band_Together.jpg",
         "genero": ["Animación", "Musical"],
         "elenco": ["Anna Kendrick", "Justin Timberlake"],
         "trailer": "https://link_al_trailer.com/trolls3",
@@ -110,11 +110,11 @@
     {
         "id": "10",
         "nombre": "Zombieland: Double Tap 2",
-        "portada": "img/zombieland2.jpg",
+        "portada": "img/Zombieland_Double_Tap_2.jpg",
         "genero": ["Comedia", "Terror"],
         "elenco": ["Woody Harrelson", "Jesse Eisenberg"],
         "trailer": "https://link_al_trailer.com/zombieland2",
-        "año": 2024,
+        "año": 2019,
         "calificacion": "N/A",
         "clasificacion": "N/A",
         "sinopsis": "Los sobrevivientes regresan para enfrentar nuevos tipos de zombis."
@@ -122,11 +122,11 @@
     {
         "id": "11",
         "nombre": "Sherlock Holmes 3",
-        "portada": "img/sherlock3.jpg",
+        "portada": "img/Sherlock_Holmes_3.jpg",
         "genero": ["Acción", "Misterio"],
         "elenco": ["Robert Downey Jr.", "Jude Law"],
         "trailer": "https://link_al_trailer.com/sherlock3",
-        "año": 2024,
+        "año": 2022,
         "calificacion": "N/A",
         "clasificacion": "N/A",
         "sinopsis": "Sherlock y Watson se enfrentan a un nuevo caso intrigante."
@@ -134,7 +134,7 @@
     {
         "id": "12",
         "nombre": "The Hunger Games: The Ballad of Songbirds and Snakes",
-        "portada": "img/hungergames2.jpg",
+        "portada": "img/The_Hunger_Games_The_Ballad_of_Songbirds_and_Snakes.jpg",
         "genero": ["Aventura", "Drama"],
         "elenco": ["Tom Blyth", "Rachel Zegler"],
         "trailer": "https://link_al_trailer.com/hungergames2",
@@ -146,7 +146,7 @@
     {
         "id": "13",
         "nombre": "Dungeons & Dragons: Honor Among Thieves",
-        "portada": "img/dnd.jpg",
+        "portada": "img/Dungeons_&_Dragons_Honor_Among_Thieves.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Chris Pine", "Michelle Rodriguez"],
         "trailer": "https://link_al_trailer.com/dnd",
@@ -158,7 +158,7 @@
     {
         "id": "14",
         "nombre": "Aquaman and the Lost Kingdom",
-        "portada": "img/aquaman3.jpg",
+        "portada": "img/Aquaman_and_the_Lost_Kingdom.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Jason Momoa", "Patrick Wilson"],
         "trailer": "https://link_al_trailer.com/aquaman3",
@@ -170,7 +170,7 @@
     {
         "id": "15",
         "nombre": "The Exorcist: Believer",
-        "portada": "img/exorcist2.jpg",
+        "portada": "img/The_Exorcist_Believer.jpg",
         "genero": ["Horror", "Suspenso"],
         "elenco": ["Leslie Odom Jr.", "Ann Dowd"],
         "trailer": "https://link_al_trailer.com/exorcist2",
@@ -182,7 +182,7 @@
     {
         "id": "16",
         "nombre": "Napoleon",
-        "portada": "img/napoleon2.jpg",
+        "portada": "img/Napoleon.jpg",
         "genero": ["Historia", "Drama"],
         "elenco": ["Joaquin Phoenix", "Vanessa Kirby"],
         "trailer": "https://link_al_trailer.com/napoleon",
@@ -194,7 +194,7 @@
     {
         "id": "17",
         "nombre": "Killers of the Flower Moon",
-        "portada": "img/killers.jpg",
+        "portada": "img/Killers_of_the_Flower_Moon.jpg",
         "genero": ["Drama", "Crimen"],
         "elenco": ["Leonardo DiCaprio", "Robert De Niro"],
         "trailer": "https://link_al_trailer.com/killers",
@@ -206,11 +206,11 @@
     {
         "id": "18",
         "nombre": "The Flash",
-        "portada": "img/theflash.jpg",
+        "portada": "img/flash.jpg",
         "genero": ["Acción", "Ciencia Ficción"],
         "elenco": ["Ezra Miller", "Michael Keaton"],
         "trailer": "https://link_al_trailer.com/theflash",
-        "año": 2024,
+        "año": 2023,
         "calificacion": "N/A",
         "clasificacion": "N/A",
         "sinopsis": "El Flash debe enfrentar a varios villanos en su viaje a través del tiempo."
@@ -218,7 +218,7 @@
     {
         "id": "19",
         "nombre": "Oppenheimer",
-        "portada": "img/oppenheimer.jpg",
+        "portada": "img/Oppenheimer.jpg",
         "genero": ["Biografía", "Drama"],
         "elenco": ["Cillian Murphy", "Emily Blunt"],
         "trailer": "https://link_al_trailer.com/oppenheimer",
