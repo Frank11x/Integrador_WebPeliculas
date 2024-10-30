@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             const peliculaId = urlParams.get("id"); // Obtenemos el id de la URL
 
-            // Si hay un id en la URL, buscamos la película para mostrarla
+            // Si hay un id en la URL, buscamos la película para mostrarla directamente
             if (peliculaId) {
                 const pelicula = data.find(p => p.id === peliculaId); // Buscamos la película
 
@@ -60,7 +60,7 @@ async function realizarBusqueda() {
 // Manejar la suscripción
 function manejarSuscripcion(event) {
     event.preventDefault(); // Evitar el envío del formulario
-    const emailInput = document.getElementById("email");
+    const emailInput = document.getElementById("correo"); // Asegúrate de que el ID coincida con el HTML
     const email = emailInput.value;
 
     if (validateEmail(email)) {
@@ -75,41 +75,4 @@ function manejarSuscripcion(event) {
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
-}
-
-
-function realizarBusqueda() {
-    const busqueda = document.getElementById('busqueda').value.toLowerCase();
-    const resultadosDiv = document.getElementById('resultado-busqueda');
-    
-    // Borrar resultados previos
-    resultadosDiv.innerHTML = '';
-
-    // Simulación de resultados de búsqueda (adaptar para JSON en producción)
-    const peliculas = [
-        { titulo: "Película 1", sinopsis: "Sinopsis de Película 1", genero: "Acción" },
-        { titulo: "Película 2", sinopsis: "Sinopsis de Película 2", genero: "Drama" },
-        // Añadir más películas aquí o cargar desde JSON
-    ];
-
-    // Filtrar y mostrar resultados
-    const resultados = peliculas.filter(pelicula => 
-        pelicula.titulo.toLowerCase().includes(busqueda) ||
-        pelicula.genero.toLowerCase().includes(busqueda)
-    );
-
-    if (resultados.length > 0) {
-        resultados.forEach(pelicula => {
-            const div = document.createElement('div');
-            div.className = 'resultado-item';
-            div.innerHTML = `
-                <h3>${pelicula.titulo}</h3>
-                <p>${pelicula.sinopsis}</p>
-                <p><strong>Género:</strong> ${pelicula.genero}</p>
-            `;
-            resultadosDiv.appendChild(div);
-        });
-    } else {
-        resultadosDiv.innerHTML = '<p>No se encontraron resultados.</p>';
-    }
 }
