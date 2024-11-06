@@ -85,75 +85,7 @@ footer {
     margin: 0 30px; /* con margen a los costados*/ 
     text-align: center; /* Centrar contenido */  
 }
-/* ---- ----- ----- Carrusel ----- ----- ----- */
-/* Estilos para el carrusel */  
-.peliculas-recomendadas {  
-    margin: 20px auto;  
-    max-width: 1200px; /* Ancho máximo del carrusel */  
-}  
 
-.peliculas-recomendadas .contenedor-principal {  
-    display: flex;  
-    align-items: center;  
-    position: relative;  
-    overflow: hidden;  
-}  
-
-.peliculas-recomendadas .contenedor-carousel {  
-    width: 100%; /* 100% del ancho */  
-    padding: 10px 0; /* Espaciado superior e inferior */  
-    overflow-x: auto; /* Habilitar desplazamiento horizontal */  
-    scroll-behavior: smooth; /* Transición suave al desplazarse */  
-    white-space: nowrap; /* Evita que las películas se apilen */  
-}  
-
-.peliculas-recomendadas .contenedor-carousel .carousel {  
-    display: flex;  
-}  
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {  
-    flex: 0 0 auto; /* Proporción fija */  
-    width: 150px; /* Ancho fijo para cada película */  
-    margin: 0 10px; /* Espacio entre películas */  
-    transition: transform 0.3s ease; /* Transición suave al hacer hover */  
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);  
-}  
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {  
-    width: 100%; /* Ocupa todo el ancho */  
-    border-radius: 5px; /* Bordes redondeados */  
-}  
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula:hover {  
-    transform: scale(1.1); /* Escala al pasar el mouse */  
-}  
-
-/* Botones de flecha */  
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,  
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {  
-    position: absolute;  
-    top: 50%;  
-    transform: translateY(-50%);  
-    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */  
-    border: none;  
-    border-radius: 5px;  
-    cursor: pointer;  
-    padding: 10px;  
-    z-index: 10;  
-}  
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {  
-    left: 10px; /* Distancia desde el borde izquierdo */  
-}  
-
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {  
-    right: 10px; /* Distancia desde el borde derecho */  
-}  
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,  
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {  
-    background: rgba(255, 255, 255, 1); /* Cambia a blanco opaco al hover */  
-}  
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
@@ -189,4 +121,77 @@ footer {
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
     margin: 0; /* Elimina cualquier margen */
+}
+* {  
+    box-sizing: border-box;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+body {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh; /* La altura de la ventana */  
+    background-color: #1a1a1a; /* Fondo oscuro */  
+    font-family: Arial, sans-serif; /* Fuente para el texto */  
+}  
+
+.contenedor-principal {  
+    position: relative;  
+    width: 80%;  
+    max-width: 800px; /* Limita el ancho máximo */  
+    margin: auto;  
+    overflow: hidden;  
+    border-radius: 10px; /* Bordes redondeados para el contenedor */  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra del contenedor */  
+}  
+
+.contenedor-carousel {  
+    display: flex;  
+    transition: transform 0.5s ease;  
+}  
+
+.carousel {  
+    display: flex;  
+}  
+
+.pelicula {  
+    min-width: 200px; /* Ancho fijo para las películas */  
+    margin: 10px;  
+    text-align: center;  
+    color: #ffffff; /* Color del texto */  
+}  
+
+.pelicula img {  
+    width: 100%;  
+    border-radius: 10px; /* Bordes redondeados para las imágenes */  
+    border: 2px solid #007bff; /* Bordes azules para las imágenes */  
+}  
+
+.flecha-izquierda, .flecha-derecha {  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    background-color: rgba(0, 123, 255, 0.8); /* Fondo azul transparente */  
+    color: #ffffff; /* Color del texto de las flechas */  
+    border: none;  
+    padding: 10px 15px;  
+    cursor: pointer;  
+    border-radius: 5px;  
+    font-size: 24px;  
+    z-index: 10;  
+    transition: background-color 0.3s; /* Efecto de transición al hacer hover */  
+}  
+
+.flecha-izquierda {  
+    left: 10px; /* Posición de la flecha izquierda */  
+}  
+
+.flecha-derecha {  
+    right: 10px; /* Posición de la flecha derecha */  
+}  
+
+.flecha-izquierda:hover, .flecha-derecha:hover {  
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */  
 }
