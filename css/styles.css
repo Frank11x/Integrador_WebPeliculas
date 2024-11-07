@@ -1,197 +1,148 @@
-/* Estilos generales */  
 body {  
     font-family: Arial, sans-serif;  
     margin: 0;  
-    padding: 0;  
-    display: flex;  
-    flex-direction: column; /* Permitir que el footer siempre esté al final */  
-    height: 100vh; /* Altura total de la ventana de visualización */  
+    background-color: #141414;  
+    color: white;  
 }  
 
-/* Estilos del encabezado y menú de navegación */  
 header {  
-    background-color: black; /* Fondo negro para el menú */  
-    color: white; /* Color blanco para el texto */  
-    padding: 10px 0; /* Espaciado superior e inferior */  
+    padding: 20px;  
+    background-color: #111;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
 }  
 
-.menu-navegacion ul {  
-    list-style-type: none; /* Quita los puntos de la lista */  
-    padding: 0; /* Quita el padding */  
-    margin: 0; /* Quita el margin */  
-    display: flex; /* Muestra los elementos en fila */  
-    justify-content: center; /* Centra los elementos horizontalmente */  
+.logo {  
+    font-size: 24px;  
+    font-weight: bold;  
 }  
 
-.menu-navegacion li {  
-    margin: 0 20px; /* Espaciado entre elementos del menú */  
-}  
-
-.menu-navegacion a {  
-    color: white; /* Color blanco para los enlaces */  
-    text-decoration: none; /* Quita el subrayado */  
-    font-weight: bold; /* Letras en negrita */  
-}  
-
-.menu-navegacion a:hover {  
-    text-decoration: underline; /* Subrayado cuando se pasa el puntero */  
-}  
-
-/* Estilos de la barra de búsqueda */  
-.barra-buscador {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 15px; /* Espaciado interno */  
-    text-align: center; /* Centra el contenido */  
-    margin: 0; /* Quita el margen para que no haya espacio inferior */  
-}  
-
-/* Estilos de las películas destacadas */  
-.peliculas-destacadas {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 200px; /* Espaciado interno */  
-    margin: 0; /* Quita el margen para que no haya espacio superior */  
-    text-align: center; /* Centra el contenido */  
-}  
-
-/* Estilos de la sección de suscripción */  
-.suscripcion {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    border-top: 2px solid black; /* Línea negra que corta la sección */  
-    padding: 20px; /* Espaciado interno */  
-    text-align: center; /* Centra el contenido */  
-}  
-
-/* Estilos para el pie de página */  
-footer {  
-    text-align: center;  
-    padding: 10px 0;  
-    background-color: black; /* Fondo negro para el pie de página */  
-    color: white; /* Color blanco para el texto */  
-}  
-
-/* Nuevo contenedor para el mensaje de error */  
-.contenedor-mensaje-error {  
-    background-color: #ADD8E6; /* Fondo azul claro */  
-    padding: 250px 20px; /* Espaciado interno */  
-    margin: 0 30px; /* con margen a los costados*/ 
-    text-align: center; /* Centrar contenido */  
-}  
-
-/* Estilos para el mensaje de error en la búsqueda */  
-.mensaje-error {  
-    border: 2px solid red; /* Borde rojo */  
-    color: red; /* Texto en rojo */  
-    padding: 20px; /* Espaciado interno */  
-    margin: 0 30px; /* con margen a los costados*/ 
-    text-align: center; /* Centrar contenido */  
-}
-
-
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-    .peliculas-recomendadas .contenedor-carousel {
-        overflow: visible;
-        width: 20%; /* Ajustar el ancho para pantallas más pequeñas */
-    }
-
-    .peliculas-recomendadas .contenedor-carousel .carousel {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px; /* Ajustado */
-    }
-
-    .peliculas-recomendadas .indicadores,
-    .peliculas-recomendadas .flecha-izquierda,
-    .peliculas-recomendadas .flecha-derecha {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
-        flex: 1 0 40%; /* Ajustar a 40% en pantallas pequeñas */
-    }
-
-    .contenedor-titulo-controles h3 {
-        font-size: 20px; /* Ajustar el tamaño del título para pantallas pequeñas */
-    }
-}
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
-    margin: 0; /* Elimina cualquier margen */
-}
-* {  
-    box-sizing: border-box;  
+nav ul {  
+    list-style: none;  
+    display: flex;  
+    gap: 20px;  
     margin: 0;  
     padding: 0;  
 }  
 
-body {  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    height: 100vh; /* La altura de la ventana */  
-    background-color: #1a1a1a; /* Fondo oscuro */  
-    font-family: Arial, sans-serif; /* Fuente para el texto */  
+nav a {  
+    color: white;  
+    text-decoration: none;  
 }  
 
-.contenedor-principal {  
+.search-container {  
+    text-align: center;  
+    margin: 20px 0;  
     position: relative;  
-    width: 80%;  
-    max-width: 800px; /* Limita el ancho máximo */  
-    margin: auto;  
-    overflow: hidden;  
-    border-radius: 10px; /* Bordes redondeados para el contenedor */  
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra del contenedor */  
 }  
 
-.contenedor-carousel {  
-    display: flex;  
-    transition: transform 0.5s ease;  
+#search {  
+    padding: 10px;  
+    width: 300px;  
+    border: none;  
+    border-radius: 5px;  
+    outline: none;  
 }  
 
 .carousel {  
+    position: relative;  
+    max-width: 90%;  
+    margin: 0 auto 20px auto; /* Ajustar margen inferior para espacio entre el carrusel y películas */  
+    overflow: hidden;  
+}  
+
+.carousel-container {  
     display: flex;  
 }  
 
-.pelicula {  
-    min-width: 200px; /* Ancho fijo para las películas */  
+.slides {  
+    display: flex;  
+    transition: transform 0.5s ease-in-out;  
+}  
+
+.slide {  
+    min-width: 300px;  
+    margin: 0 10px;  
+    text-align: center;  
+}  
+
+.slide img {  
+    width: 100%;  
+    border-radius: 8px;  
+}  
+
+/* Estilos de los botones del carrusel */
+button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que las flechas estén siempre sobre las imágenes */
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+/* Botón de la flecha izquierda */
+.prev {
+    left: 20px; /* Ajuste para mantener la flecha a la izquierda */
+}
+
+/* Botón de la flecha derecha */
+.next {
+    right: 20px; /* Ajuste para mantener la flecha a la derecha */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+h1, h2 {  
+    text-align: center;  
+    margin: 20px 0;  
+}  
+
+.movies-list {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: space-around;  
+    padding: 20px;  
+}  
+
+.movie {  
+    position: relative;  
     margin: 10px;  
     text-align: center;  
-    color: #ffffff; /* Color del texto */  
+    width: 150px;  
+    transition: transform 0.3s;  
 }  
 
-.pelicula img {  
+.movie img {  
     width: 100%;  
-    border-radius: 10px; /* Bordes redondeados para las imágenes */  
-    border: 2px solid #007bff; /* Bordes azules para las imágenes */  
+    border-radius: 8px;  
+    transition: transform 0.3s;  
 }  
 
-.flecha-izquierda, .flecha-derecha {  
-    position: absolute;  
-    top: 50%;  
-    transform: translateY(-50%);  
-    background-color: rgba(0, 123, 255, 0.8); /* Fondo azul transparente */  
-    color: #ffffff; /* Color del texto de las flechas */  
-    border: none;  
-    padding: 10px 15px;  
-    cursor: pointer;  
-    border-radius: 5px;  
-    font-size: 24px;  
-    z-index: 10;  
-    transition: background-color 0.3s; /* Efecto de transición al hacer hover */  
+.movie:hover {  
+    transform: scale(1.05);  
+    z-index: 1;  
 }  
 
-.flecha-izquierda {  
-    left: 10px; /* Posición de la flecha izquierda */  
+.movie h4 {  
+    margin: 5px 0 5px;  
+    font-size: 16px;  
 }  
 
-.flecha-derecha {  
-    right: 10px; /* Posición de la flecha derecha */  
-}  
-
-.flecha-izquierda:hover, .flecha-derecha:hover {  
-    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */  
+footer {  
+    text-align: center;  
+    padding: 20px;  
+    background-color: #111;  
 }

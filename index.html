@@ -3,130 +3,87 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Reviews de Películas</title>  
+    <title>Reseñas de Películas - Estilo Netflix</title>  
     <link rel="stylesheet" href="css/styles.css">  
 </head>  
 <body>  
-    <!-- Banner -->  
-    <div class="banner">  
-        <img src="img/banner.jpg" alt="Banner" style="width: 100%; height: auto;">  
-    </div>  
-
-    <!-- Encabezado con el menú de navegación -->  
     <header>  
-        <nav class="menu-navegacion">  
+        <div class="logo">MiRevisión</div>  
+        <nav>  
             <ul>  
-                <li><a href="index.html">Inicio</a></li>  
-                <li><a href="reseñas.html">Reseñas</a></li>  
-                <li><a href="novedades.html">Novedades</a></li>  
-                <li><a href="contacto.html">Contacto</a></li>  
+                <li><a href="#">Home</a></li>  
+                <li><a href="#">Películas</a></li>  
+                <li><a href="#">Series</a></li>  
+                <li><a href="#">Contacto</a></li>  
             </ul>  
         </nav>  
     </header>  
 
-    <!-- Barra de búsqueda -->  
-    <div class="barra-buscador">  
-        <input type="text" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">  
-        <button type="button">Buscar</button>  
-    </div>   
+    <main>  
+        <h1>Reseñas de Películas</h1>  
+        
+        <div class="search-container">  
+            <input type="text" id="search" placeholder="Buscar películas..." onkeyup="searchMovies()">  
+        </div>  
 
-    <div class="peliculas-recomendadas contenedor">
-        <div class="contenedor-titulo-controles">
-            <h3>Películas Recomendadas</h3>
-            <div class="indicadores"></div>
-        </div>
-    
-    </div>  
-    <div class="contenedor-principal">  
-        <button role="button" class="flecha-izquierda">&lt;</button>  
-        <div class="contenedor-carousel">  
-            <div class="carousel">  
-                <div class="pelicula">  
-                    <img src="ruta-a-imagen1.jpg" alt="Película 1">  
-                    <h4>Título 1</h4>  
-                </div>  
-                <div class="pelicula">  
-                    <img src="ruta-a-imagen2.jpg" alt="Película 2">  
-                    <h4>Título 2</h4>  
-                </div>  
-                <div class="pelicula">  
-                    <img src="ruta-a-imagen3.jpg" alt="Película 3">  
-                    <h4>Título 3</h4>  
-                </div>  
-                <div class="pelicula">  
-                    <img src="ruta-a-imagen4.jpg" alt="Película 4">  
-                    <h4>Título 4</h4>  
-                </div>  
-                <div class="pelicula">  
-                    <img src="ruta-a-imagen5.jpg" alt="Película 5">  
-                    <h4>Título 5</h4>  
+        <div class="carousel">  
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>  
+            <div class="carousel-container">  
+                <div class="slides">  
+                    <div class="slide">  
+                        <img src="asset/carrusel 1.jpg" alt="Película 1">  
+                        <h3>Película 1</h3>  
+                        <p>Descripción de la película 1.</p>  
+                    </div>  
+                    <div class="slide">  
+                        <img src="asset/carrusel 2.jpg" alt="Película 2">  
+                        <h3>Película 2</h3>  
+                        <p>Descripción de la película 2.</p>  
+                    </div>  
+                    <div class="slide">  
+                        <img src="asset/carrusel 3.jpg" alt="Película 3">  
+                        <h3>Película 3</h3>  
+                        <p>Descripción de la película 3.</p>  
+                    </div>  
+                    <div class="slide">  
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">  
+                        <h3>Película 4</h3>  
+                        <p>Descripción de la película 4.</p>  
+                    </div>  
                 </div>  
             </div>  
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>  
         </div>  
-        <button role="button" class="flecha-derecha">&gt;</button>  
-    </div>  
-</section>  
-    
 
-    <!-- Sección de Suscripción a Novedades -->  
-    <section class="suscripcion">  
-        <h2>¡Suscríbete a nuestras novedades!</h2>  
-        <form id="formSuscripcion" onsubmit="return manejarSuscripcion(event);">  
-            <input type="email" placeholder="Introduce tu correo electrónico" required>  
-            <button type="submit">Suscribirme</button>  
-        </form>  
-    </section>  
+        <h2>Películas Disponibles</h2>  
+        <div class="movies-list" id="movies-list">  
+            <div class="movie">  
+                <img src="https://via.placeholder.com/200x300?text=Película+A" alt="Película A">  
+                <h4>Película A</h4>  
+                <p>Descripción breve de la película A.</p>  
+            </div>  
+            <div class="movie">  
+                <img src="https://via.placeholder.com/200x300?text=Película+B" alt="Película B">  
+                <h4>Película B</h4>  
+                <p>Descripción breve de la película B.</p>  
+            </div>  
+            <div class="movie">  
+                <img src="https://via.placeholder.com/200x300?text=Película+C" alt="Película C">  
+                <h4>Película C</h4>  
+                <p>Descripción breve de la película C.</p>  
+            </div>  
+            <div class="movie">  
+                <img src="https://via.placeholder.com/200x300?text=Película+D" alt="Película D">  
+                <h4>Película D</h4>  
+                <p>Descripción breve de la película D.</p>  
+            </div>  
+        </div>  
+    </main>  
 
-    <!-- Pie de página -->  
     <footer>  
-        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>  
+        <p>&copy; 2024 MiRevisión - Todas las películas reseñadas son propiedad de sus respectivos dueños.</p>  
     </footer>  
 
-    <!-- Enlace al archivo JavaScript -->  
     <script src="js/main.js"></script>  
-    <div class="peliculas-recomendadas">  
-        <!-- Carrusel de películas recomendadas aquí -->  
-        <div class="contenedor-carousel">  
-            <!-- Contenido del carrusel -->  
-        </div>  
-    
-        <!-- Sección de Reseñas de Películas -->  
-        <div class="seccion-reseñas">  
-            <h2>Reseñas de Películas</h2>  
-            <div class="reseñas">  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen1.jpg" alt="Película 1">  
-                    <h3>Título de la Película 1</h3>  
-                    <p>Descripción breve de la película 1.</p>  
-                </div>  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen2.jpg" alt="Película 2">  
-                    <h3>Título de la Película 2</h3>  
-                    <p>Descripción breve de la película 2.</p>  
-                </div>  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen3.jpg" alt="Película 3">  
-                    <h3>Título de la Película 3</h3>  
-                    <p>Descripción breve de la película 3.</p>  
-                </div>  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen4.jpg" alt="Película 4">  
-                    <h3>Título de la Película 4</h3>  
-                    <p>Descripción breve de la película 4.</p>  
-                </div>  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen5.jpg" alt="Película 5">  
-                    <h3>Título de la Película 5</h3>  
-                    <p>Descripción breve de la película 5.</p>  
-                </div>  
-                <div class="reseña">  
-                    <img src="ruta-a-la-imagen6.jpg" alt="Película 6">  
-                    <h3>Título de la Película 6</h3>  
-                    <p>Descripción breve de la película 6.</p>  
-                </div>  
-                <!-- Repite más reseñas según sea necesario -->  
-            </div>  
-        </div>  
-    </div>
 </body>  
 </html>
