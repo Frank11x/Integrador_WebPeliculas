@@ -12,8 +12,8 @@
     },
     {
         "id": "2",
-        "nombre": "Barbie",
-        "portada": "img",
+        "nombre": "barbie",
+        "portada": "img/barbie.jpg",
         "genero": ["Comedia", "Fantástico"],
         "elenco": ["Margot Robbie", "Ryan Gosling"],
         "trailer": "https://link_al_trailer.com/barbie",
@@ -22,7 +22,7 @@
     {
         "id": "3",
         "nombre": "Guardians of the Galaxy Vol. 3",
-        "portada": "",
+        "portada": "img/guardianes.jpg",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],
         "trailer": "https://link_al_trailer.com/guardians3",
@@ -31,7 +31,7 @@
     {
         "id": "4",
         "nombre": "John Wick: Chapter 4",
-        "portada": "",
+        "portada": "img/john_wick.jpg",
         "genero": ["Acción", "Thriller"],
         "elenco": ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård"],
         "trailer": "https://link_al_trailer.com/johnwick4",
