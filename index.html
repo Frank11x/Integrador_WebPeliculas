@@ -1,89 +1,99 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Reseñas de Películas - Estilo Netflix</title>  
-    <link rel="stylesheet" href="css/styles.css">  
-</head>  
-<body>  
-    <header>  
-        <div class="logo">MiRevisión</div>  
-        <nav>  
-            <ul>  
-                <li><a href="#">Home</a></li>  
-                <li><a href="#">Películas</a></li>  
-                <li><a href="#">Series</a></li>  
-                <li><a href="#">Contacto</a></li>  
-            </ul>  
-        </nav>  
-    </header>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Películas - Estilo Netflix</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MiRevisión</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="suscripcion.html">Suscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main>  
-        <h1>Reseñas de Películas</h1>  
-        
-        <div class="search-container">  
-            <input type="text" id="search" placeholder="Buscar películas..." onkeyup="searchMovies()">  
-        </div>  
+    <main>
+        <h1>Reseñas de Películas</h1>
 
-        <div class="carousel">  
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>  
-            <div class="carousel-container">  
-                <div class="slides">  
-                    <div class="slide">  
-                        <img src="asset/carrusel 1.jpg" alt="Película 1">  
-                        <h3>Película 1</h3>  
-                        <p>Descripción de la película 1.</p>  
-                    </div>  
-                    <div class="slide">  
-                        <img src="asset/carrusel 2.jpg" alt="Película 2">  
-                        <h3>Película 2</h3>  
-                        <p>Descripción de la película 2.</p>  
-                    </div>  
-                    <div class="slide">  
-                        <img src="asset/carrusel 3.jpg" alt="Película 3">  
-                        <h3>Película 3</h3>  
-                        <p>Descripción de la película 3.</p>  
-                    </div>  
-                    <div class="slide">  
-                        <img src="asset/carrusel 4.jpg" alt="Película 4">  
-                        <h3>Película 4</h3>  
-                        <p>Descripción de la película 4.</p>  
-                    </div>  
-                </div>  
-            </div>  
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>  
-        </div>  
+        <!-- Contenedor para el campo de búsqueda -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar películas..." onkeyup="searchMovies()">
+        </div>
 
-        <h2>Películas Disponibles</h2>  
-        <div class="movies-list" id="movies-list">  
-            <div class="movie">  
-                <img src="https://via.placeholder.com/200x300?text=Película+A" alt="Película A">  
-                <h4>Película A</h4>  
-                <p>Descripción breve de la película A.</p>  
-            </div>  
-            <div class="movie">  
-                <img src="https://via.placeholder.com/200x300?text=Película+B" alt="Película B">  
-                <h4>Película B</h4>  
-                <p>Descripción breve de la película B.</p>  
-            </div>  
-            <div class="movie">  
-                <img src="https://via.placeholder.com/200x300?text=Película+C" alt="Película C">  
-                <h4>Película C</h4>  
-                <p>Descripción breve de la película C.</p>  
-            </div>  
-            <div class="movie">  
-                <img src="https://via.placeholder.com/200x300?text=Película+D" alt="Película D">  
-                <h4>Película D</h4>  
-                <p>Descripción breve de la película D.</p>  
-            </div>  
-        </div>  
-    </main>  
+        <!-- Carrusel de Películas -->
+        <div class="carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="asset/carrusel 1.jpg" alt="Película 1">
+                        <h3>Película 1</h3>
+                        <p>Descripción de la película 1.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="asset/carrusel 2.jpg" alt="Película 2">
+                        <h3>Película 2</h3>
+                        <p>Descripción de la película 2.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="asset/carrusel 3.jpg" alt="Película 3">
+                        <h3>Película 3</h3>
+                        <p>Descripción de la película 3.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                        <h3>Película 4</h3>
+                        <p>Descripción de la película 4.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
 
-    <footer>  
-        <p>&copy; 2024 MiRevisión - Todas las películas reseñadas son propiedad de sus respectivos dueños.</p>  
-    </footer>  
+        <!-- Lista de Películas Disponibles -->
+        <h2>Películas Disponibles</h2>
+        <div class="movies-list" id="movies-list">
+            <div class="movie">
+                <a href="articulo.html?id=1">
+                    <img src="https://via.placeholder.com/200x300?text=Película+A" alt="Película A">
+                    <h4>Película A</h4>
+                    <p>Descripción breve de la película A.</p>
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=2">
+                    <img src="https://via.placeholder.com/200x300?text=Película+B" alt="Película B">
+                    <h4>Película B</h4>
+                    <p>Descripción breve de la película B.</p>
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=3">
+                    <img src="https://via.placeholder.com/200x300?text=Película+C" alt="Película C">
+                    <h4>Película C</h4>
+                    <p>Descripción breve de la película C.</p>
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=4">
+                    <img src="https://via.placeholder.com/200x300?text=Película+D" alt="Película D">
+                    <h4>Película D</h4>
+                    <p>Descripción breve de la película D.</p>
+                </a>
+            </div>
+        </div>
+    </main>
 
-    <script src="js/main.js"></script>  
-</body>  
+    <footer>
+        <p>&copy; 2023 MiRevisión - Todas las películas reseñadas son propiedad de sus respectivos dueños.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo - Detalle de la Película</title>
+    <link rel="stylesheet" href="css/articulo.css">
+</head>
+
+<body>
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="suscripcion.html">Suscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Artículo (Detalle de la Película) -->
+    <div class="articulo-pelicula">
+        <div class="contenedor-articulo">
+            <!-- Portada de la película -->
+            <div class="portada">
+                <img id="portadaPelicula" src="" alt="Portada de la Película" style="width: 100%; height: auto;">
+            </div>
+
+            <!-- Detalles de la película -->
+            <div class="info-pelicula">
+                <h2 id="nombrePelicula"></h2>
+                <p><strong>Género:</strong> <span id="generoPelicula"></span></p>
+                <p><strong>Elenco:</strong> <span id="elencoPelicula"></span></p>
+                <p><strong>Tráiler:</strong> <a id="trailerPelicula" href="" target="_blank">Ver Tráiler</a></p>
+                <p><strong>Año:</strong> <span id="anioPelicula"></span></p>
+                <p><strong>Calificación:</strong> <span id="calificacionPelicula"></span></p>
+                <p><strong>Clasificación:</strong> <span id="clasificacionPelicula"></span></p>
+            </div>
+        </div>
+
+        <!-- Sinopsis de la película -->
+        <div class="sinopsis">
+            <h3>Sinopsis</h3>
+            <p id="sinopsisPelicula"></p>
+        </div>
+    </div>
+
+    <!-- Sección de Suscripción -->
+    <div class="suscripcion">
+        <h2>¡Suscríbete a nuestro boletín!</h2>
+        <form onsubmit="manejarSuscripcion(event)">
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para cargar datos de la película desde el JSON -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id'); // Suponiendo que pasamos un ID de película en la URL
+
+        fetch('js/peliculas.json') // Aquí es donde deberías tener tu archivo JSON de películas
+            .then(respuesta => respuesta.json())
+            .then(datos => {
+                const pelicula = datos.find(p => p.id === movieId);
+
+                if (pelicula) {
+                    document.getElementById('portadaPelicula').src = pelicula.portada;
+                    document.getElementById('nombrePelicula').innerText = pelicula.nombre;
+                    document.getElementById('generoPelicula').innerText = pelicula.genero.join(', ');
+                    document.getElementById('elencoPelicula').innerText = pelicula.elenco.join(', ');
+                    document.getElementById('trailerPelicula').href = pelicula.trailer;
+                    document.getElementById('sinopsisPelicula').innerText = pelicula.sinopsis;
+                    document.getElementById('anioPelicula').innerText = pelicula.año;
+                    document.getElementById('calificacionPelicula').innerText = pelicula.calificacion;
+                    document.getElementById('clasificacionPelicula').innerText = pelicula.clasificacion;
+                } else {
+                    console.error('Película no encontrada.');
+                }
+            })
+            .catch(error => console.error('Error al cargar los datos de la película:', error));
+
+        // Función para manejar la suscripción
+        function manejarSuscripcion(evento) {
+            evento.preventDefault();
+            const inputCorreo = document.getElementById("email");
+            const correo = inputCorreo.value;
+
+            if (validarCorreo(correo)) {
+                alert("¡Gracias por suscribirte con el correo " + correo + "!");
+                inputCorreo.value = '';
+            } else {
+                alert("Por favor, ingresa un correo electrónico válido.");
+            }
+        }
+
+        // Validar el formato del correo electrónico
+        function validarCorreo(correo) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(String(correo).toLowerCase());
+        }
+    </script>
+</body>
+
+</html>
