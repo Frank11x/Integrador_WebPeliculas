@@ -39,10 +39,10 @@
     },
     {
         "id": "5",
-        "nombre": "The Marvels",
-        "portada": "",
-        "genero": ["Acción", "Aventura"],
-        "elenco": ["Brie Larson", "Teyonah Parris", "Iman Vellani"],
+        "nombre": "Alien: Romulus",
+        "portada": "img/alien.jpg",
+        "genero": ["Ciencia Ficción", "Acción", "Terror", "Extraterrestres"],
+        "elenco": ["Fede Álvarez, Rodo Sayagues. Saga creada por: Dan O'Bannon, Ronald Shusett. Personajes: H.R. Giger"],
         "trailer": "https://link_al_trailer.com/themarvels",
         "sinopsis": "Capitana Marvel se une a otras heroínas para salvar el universo."
     },
