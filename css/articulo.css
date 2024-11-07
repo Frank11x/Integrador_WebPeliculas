@@ -40,6 +40,7 @@ header nav ul li a:hover {
 }
 
 /* Contenedor principal del artículo */
+
 .articulo-pelicula {
     max-width: 1200px;
     margin: 40px auto;
@@ -172,4 +173,11 @@ footer {
     .suscripcion input[type="email"] {
         width: 80%;
     }
+}
+/* Estilo para el contenedor de la imagen */
+.articulo img {
+    width: 100%;          /* Hace que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto;         /* Mantiene la proporción de la imagen */
+    object-fit: cover;    /* Asegura que la imagen cubra completamente el área del contenedor sin deformarse */
+    max-width: 100%;      /* Limita la imagen a que no se salga del contenedor */
 }

@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "nombre": "Oppenheimer",
+        "nombre": "op",
         "portada": "img",
         "genero": ["Biografía", "Drama"],
         "elenco": ["Cillian Murphy", "Emily Blunt", "Matt Damon"],
@@ -11,7 +11,7 @@
     {
         "id": "2",
         "nombre": "Barbie",
-        "portada": "img/barbie.jpg",
+        "portada": "img",
         "genero": ["Comedia", "Fantástico"],
         "elenco": ["Margot Robbie", "Ryan Gosling"],
         "trailer": "https://link_al_trailer.com/barbie",
