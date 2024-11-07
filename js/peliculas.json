@@ -1,12 +1,14 @@
 [
     {
         "id": "1",
-        "nombre": "op",
-        "portada": "img",
+        "nombre": "Oppenheimer",
+        "portada": "img/Oppenheimer.jpg",
         "genero": ["Biografía", "Drama"],
         "elenco": ["Cillian Murphy", "Emily Blunt", "Matt Damon"],
         "trailer": "https://link_al_trailer.com/oppenheimer",
         "sinopsis": "La vida de J. Robert Oppenheimer, el físico detrás de la bomba atómica."
+        
+        
     },
     {
         "id": "2",
@@ -20,7 +22,7 @@
     {
         "id": "3",
         "nombre": "Guardians of the Galaxy Vol. 3",
-        "portada": "img/guardians3.jpg",
+        "portada": "",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Chris Pratt", "Zoe Saldana", "Dave Bautista"],
         "trailer": "https://link_al_trailer.com/guardians3",
@@ -29,7 +31,7 @@
     {
         "id": "4",
         "nombre": "John Wick: Chapter 4",
-        "portada": "img/johnwick4.jpg",
+        "portada": "",
         "genero": ["Acción", "Thriller"],
         "elenco": ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård"],
         "trailer": "https://link_al_trailer.com/johnwick4",
@@ -38,7 +40,7 @@
     {
         "id": "5",
         "nombre": "The Marvels",
-        "portada": "img/themarvels.jpg",
+        "portada": "",
         "genero": ["Acción", "Aventura"],
         "elenco": ["Brie Larson", "Teyonah Parris", "Iman Vellani"],
         "trailer": "https://link_al_trailer.com/themarvels",
@@ -46,8 +48,8 @@
     },
     {
         "id": "6",
-        "nombre": "Dune: Part Two",
-        "portada": "img/dune2.jpg",
+        "nombre": "",
+        "portada": "",
         "genero": ["Ciencia Ficción", "Aventura"],
         "elenco": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
         "trailer": "https://link_al_trailer.com/dune2",

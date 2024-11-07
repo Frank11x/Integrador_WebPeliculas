@@ -1,3 +1,11 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body general */
 body {  
     font-family: Arial, sans-serif;  
     margin: 0;  
@@ -28,7 +36,13 @@ nav ul {
 
 nav a {  
     color: white;  
-    text-decoration: none;  
+    text-decoration: none;  /* Elimina el subrayado */
+}
+
+/* Elimina el subrayado en los enlaces al pasar el cursor */
+nav a:hover {  
+    color: #ff5733;  
+    text-decoration: none; /* Asegúrate de que no aparezca el subrayado al pasar el ratón */
 }  
 
 .search-container {  
@@ -48,7 +62,7 @@ nav a {
 .carousel {  
     position: relative;  
     max-width: 90%;  
-    margin: 0 auto 20px auto; /* Ajustar margen inferior para espacio entre el carrusel y películas */  
+    margin: 0 auto 20px auto;  
     overflow: hidden;  
 }  
 
@@ -84,18 +98,18 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Asegura que las flechas estén siempre sobre las imágenes */
+    z-index: 10;
     transition: background-color 0.3s, transform 0.3s ease;
 }
 
 /* Botón de la flecha izquierda */
 .prev {
-    left: 20px; /* Ajuste para mantener la flecha a la izquierda */
+    left: 20px;
 }
 
 /* Botón de la flecha derecha */
 .next {
-    right: 20px; /* Ajuste para mantener la flecha a la derecha */
+    right: 20px;
 }
 
 /* Efecto hover para los botones */
@@ -104,12 +118,35 @@ button:hover {
     transform: translateY(-50%) scale(1.1);
 }
 
-
+/* Títulos generales */
 h1, h2 {  
     text-align: center;  
     margin: 20px 0;  
-}  
+    color: #ff5733; 
+    font-family: 'Arial', sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);  
+}
 
+/* Títulos de las películas en la lista */
+.movie h4 {
+    font-size: 18px;
+    font-weight: bold;  
+    color: #e1ff00; 
+    margin: 10px 0 5px;
+    text-transform: capitalize; 
+    letter-spacing: 1px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para los títulos de las películas */
+.movie h4:hover {
+    color: #ff5733;  
+    transform: scale(1.1);  
+}
+
+/* Contenedor de las películas */
 .movies-list {  
     display: flex;  
     flex-wrap: wrap;  
@@ -136,13 +173,8 @@ h1, h2 {
     z-index: 1;  
 }  
 
-.movie h4 {  
-    margin: 5px 0 5px;  
-    font-size: 16px;  
-}  
-
 footer {  
     text-align: center;  
     padding: 20px;  
     background-color: #111;  
-}
+}  
