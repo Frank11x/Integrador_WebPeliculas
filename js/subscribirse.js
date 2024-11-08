@@ -37,4 +37,3 @@ function mostrarMensaje(mensaje, esError) {
     mensajesDiv.style.display = 'block';
     mensajesDiv.style.backgroundColor = esError ? '#FF5722' : '#4CAF50'; // Rojo para error, verde para éxito
 }
-

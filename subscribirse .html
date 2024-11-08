@@ -3,7 +3,7 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Subscribirse</title>  
+    <title>Suscribirse</title>  
     <link rel="stylesheet" href="css/subscribirse.css">  
 </head>  
 <body>  
@@ -11,9 +11,8 @@
     <header>  
         <nav>  
             <ul>  
-                <li><a href="index.htm">Home</a></li>  
-                <li><a href="subscribirse.html">Suscribirse</a></li>  
-                <li><a href="otro-enlace.html">Acerca de</a></li>  
+                <li><a href="index.html">Home</a></li>  <!-- Corregido el enlace a index.html -->  
+                <li><a href="subscribirse .html">Suscribirse</a></li>  
             </ul>  
         </nav>  
     </header>  
@@ -33,54 +32,64 @@
     <div id="mensajes"></div>  
     <div id="datosEnviados"></div> <!-- Contenedor para mostrar datos enviados -->  
     
-    <script src="js/subscribirse.js"></script>   
+    <script src="js/subscribirse.js"></script>  
     <script>  
-        document.getElementById('formularioContacto').addEventListener('submit', function(event) {  
-            event.preventDefault(); // Evita el envío del formulario  
+        document.getElementById('botonSuscribir').addEventListener('click', function(event) {  
+            event.preventDefault(); // Evita que la página se recargue  
 
-            // Limpiar mensajes previos  
+            // Limpiar mensajes anteriores  
             const mensajesDiv = document.getElementById('mensajes');  
-            mensajesDiv.style.display = 'none';  
-            mensajesDiv.innerText = '';  
+            mensajesDiv.innerHTML = '';  
+            const datosDiv = document.getElementById('datosEnviados');  
+            datosDiv.innerHTML = '';  
 
-            let esValido = true;  
-            const nombre = document.getElementById('nombre');  
-            const telefono = document.getElementById('telefono');  
-            const correo = document.getElementById('correo');  
+            // Obtén los valores de los campos  
+            const nombre = document.getElementById('nombre').value.trim();  
+            const telefono = document.getElementById('telefono').value.trim();  
+            const correo = document.getElementById('correo').value.trim();  
 
-            // Validación básica de nombre  
-            if (!nombre.value.trim()) {  
-                mostrarMensaje('El nombre es requerido.', true);  
-                esValido = false;  
+            // Expresiones regulares  
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validación de Email  
+            const telefonoRegex = /^\d{1,15}$/; // Validación de Teléfono (1 a 15 dígitos)  
+
+            let errores = [];  
+
+            // Validaciones  
+            if (!nombre) {  
+                errores.push("El nombre es obligatorio.");  
+            }  
+            if (!emailRegex.test(correo)) {  
+                errores.push("El correo electrónico no es válido.");  
+            }  
+            if (telefono && !telefonoRegex.test(telefono)) {  
+                errores.push("El teléfono debe ser un número de hasta 15 dígitos.");  
             }  
 
-            // Validación de correo  
-            const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
-            if (!correo.value.trim() || !regexCorreo.test(correo.value)) {  
-                mostrarMensaje('El correo electrónico no es válido.', true);  
-                esValido = false;  
-            }  
+            // Mostrar errores o datos  
+            if (errores.length > 0) {  
+                errores.forEach(function(error) {  
+                    const errorElement = document.createElement('div');  
+                    errorElement.classList.add('error');  
+                    errorElement.textContent = error;  
+                    mensajesDiv.appendChild(errorElement);  
+                });  
+            } else {  
+                const mensaje = `Gracias por suscribirte, ${nombre}. Te contactaremos a través de ${correo}.`;  
+                const mensajeElement = document.createElement('div');  
+                mensajeElement.classList.add('exito');  
+                mensajeElement.textContent = mensaje;  
+                mensajesDiv.appendChild(mensajeElement);  
+                
+                // Mostrar datos enviados  
+                const datosElement = document.createElement('div');  
+                const telefonoTexto = telefono ? `, Teléfono: ${telefono}` : '';  
+                datosElement.innerHTML = `<strong>Datos Enviados:</strong> Nombre: ${nombre}, Correo: ${correo}${telefonoTexto}`;  
+                datosDiv.appendChild(datosElement);  
 
-            // Validación de teléfono (opcional)  
-            const telefonoRegex = /^\d{1,15}$/; // 1 a 15 dígitos  
-            if (telefono.value && !telefonoRegex.test(telefono.value)) {  
-                mostrarMensaje('El teléfono debe ser un número de hasta 15 dígitos.', true);  
-                esValido = false;  
-            }  
-
-            // Si es válido, mostrar mensaje de éxito  
-            if (esValido) {  
-                mostrarMensaje(`Gracias por suscribirte, ${nombre.value}. Te contactaremos a través de ${correo.value}.`, false);  
-                document.getElementById('formularioContacto').reset(); // Limpia el formulario  
+                // Resetea los campos del formulario si es necesario  
+                document.getElementById('formularioContacto').reset();  
             }  
         });  
-
-        function mostrarMensaje(mensaje, esError) {  
-            const mensajesDiv = document.getElementById('mensajes');  
-            mensajesDiv.innerText = mensaje;  
-            mensajesDiv.style.display = 'block';  
-            mensajesDiv.style.backgroundColor = esError ? '#FF5722' : '#4CAF50'; // Rojo para error, verde para éxito  
-        }  
-    </script>  
+    </script>   
 </body>  
 </html>

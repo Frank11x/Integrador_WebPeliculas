@@ -10,7 +10,33 @@ body {
     height: 100vh; /* Altura completa de la ventana */  
     flex-direction: column; /* Apilar elementos verticalmente */  
 }  
+header {  
+    padding: 20px;  
+    background-color: #111;  
+    display: flex;  
+    justify-content: center; /* Centra el menú horizontalmente */  
+    align-items: center;  
+}  
 
+nav ul {  
+    list-style-type: none; /* Quita los puntos de la lista */  
+    margin: 0;  /* Quita el margen */  
+    padding: 0; /* Quita el padding */  
+    display: flex; /* Muestra los elementos en fila */  
+}  
+
+nav ul li {  
+    margin: 0 15px; /* Espacio entre los enlaces */  
+}  
+
+nav ul li a {  
+    color: white;   
+    text-decoration: none; /* Sin subrayado */  
+}  
+
+nav ul li a:hover {  
+    text-decoration: underline; /* Subrayado al pasar el mouse */  
+}  
 /* Contenedor del formulario */  
 .contenedorFormulario {  
     border: 2px solid #ff5733; /* Color destacado */  
