@@ -1,0 +1,94 @@
+/* Estilo base */  
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    background-color: #141414; /* Color de fondo */  
+    color: white;  
+    display: flex;  
+    justify-content: center; /* Centrar horizontalmente */  
+    align-items: center; /* Centrar verticalmente */  
+    height: 100vh; /* Altura completa de la ventana */  
+    flex-direction: column; /* Apilar elementos verticalmente */  
+}  
+
+/* Contenedor del formulario */  
+.contenedorFormulario {  
+    border: 2px solid #ff5733; /* Color destacado */  
+    border-radius: 15px;  
+    padding: 20px;  
+    background-color: #1a1a1a; /* Color de fondo */  
+    width: 300px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra */  
+    display: flex;  
+    flex-direction: column; /* Elementos apilados verticalmente */  
+    align-items: center; /* Centra los elementos en horizontal */  
+}  
+
+/* Estilos de etiquetas */  
+label {  
+    margin-top: 10px;  
+    display: block;  
+    font-weight: bold;  
+    color: #ff5733; /* Color destacado */  
+}  
+
+/* Estilos de inputs */  
+input[type="text"],  
+input[type="email"] {  
+    width: 100%; /* Ancho completo */  
+    padding: 10px;  
+    margin-top: 5px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */  
+}  
+
+input[type="text"]:focus,  
+input[type="email"]:focus {  
+    border-color: #ff5733;  
+    outline: none;  
+}  
+
+/* Estilo del botón */  
+button {  
+    background-color: #ff5733;  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    padding: 10px 15px;  
+    margin-top: 15px;  
+    cursor: pointer;  
+    width: auto; /* Ancho automático para el botón */  
+    font-weight: bold;  
+    display: block; /* Comportamiento de bloque */  
+}  
+
+button:hover {  
+    background-color: darkred; /* Color cuando se pasa el ratón */  
+}  
+
+/* Mensajes */  
+#mensajes {  
+    margin-top: 20px; /* Espacio encima de los mensajes */  
+    color: green;  
+    text-align: center; /* Centra el texto */  
+    width: 300px; /* Asegura que el div de mensajes tenga el mismo ancho que el formulario */  
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */  
+    padding: 10px; /* Agrega un padding */  
+    border-radius: 5px; /* Bordes redondeados */  
+    
+}  
+
+/* Clases de mensajes específicos */  
+.error {  
+    color: red;  
+    font-size: 0.9em;  
+    margin-top: 5px;  
+}  
+
+.exito {  
+    color: red;  
+    font-size: 1em;  
+    margin-top: 10px;  
+    font-weight: bold;  
+}
