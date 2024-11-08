@@ -1,63 +1,60 @@
-// Carrusel
-const carrusel = document.getElementById('carousel');
+const fila = document.querySelector('.contenedor-carousel');
+const peliculas = document.querySelectorAll('.pelicula');
+
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
 
-let desplazamiento;
-let peliculasVisibles = 5;
+// ? ----- ----- Event Listener para la flecha derecha. ----- ----- 
+flechaDerecha.addEventListener('click', () => {
+    fila.scrollLeft += fila.offsetWidth;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const peliculas = document.querySelectorAll('.pelicula');
-    if (peliculas.length === 0) {
-        console.error("No hay películas disponibles en el carrusel.");
-        return;
+    const indicadorActivo = document.querySelector('.indicadores .activo');
+    if(indicadorActivo.nextSibling){
+        indicadorActivo.nextSibling.classList.add('activo');
+        indicadorActivo.classList.remove('activo');
+    }
+});
+
+// ? ----- ----- Event Listener para la flecha izquierda. ----- ----- 
+flechaIzquierda.addEventListener('click', () => {
+    fila.scrollLeft -= fila.offsetWidth;
+
+    const indicadorActivo = document.querySelector('.indicadores .activo');
+    if(indicadorActivo.previousSibling){
+        indicadorActivo.previousSibling.classList.add('activo');
+        indicadorActivo.classList.remove('activo');
+    }
+});
+
+// ? ----- ----- Paginacion ----- ----- 
+const numeroPaginas = Math.ceil(peliculas.length / 5);
+for(let i = 0; i < numeroPaginas; i++){
+    const indicador = document.createElement('button');
+
+    if(i === 0){
+        indicador.classList.add('activo');
     }
 
-    const anchoPelicula = peliculas[0].offsetWidth;
-    desplazamiento = anchoPelicula * peliculasVisibles;
+    document.querySelector('.indicadores').appendChild(indicador);
+    indicador.addEventListener('click', (e) => {
+        fila.scrollLeft = i * fila.offsetWidth;
 
-    flechaIzquierda.addEventListener('click', moverCarruselIzquierda);
-    flechaDerecha.addEventListener('click', moverCarruselDerecha);
+        document.querySelector('.indicadores .activo').classList.remove('activo');
+        e.target.classList.add('activo');
+    });
+}
 
-    window.addEventListener('resize', () => {
-        const nuevoAnchoPelicula = peliculas[0].offsetWidth;
-        desplazamiento = nuevoAnchoPelicula * peliculasVisibles;
+// ? ----- ----- Hover ----- ----- 
+peliculas.forEach((pelicula) => {
+    pelicula.addEventListener('mouseenter', (e) => {
+        const elemento = e.currentTarget;
+        setTimeout(() => {
+            peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+            elemento.classList.add('hover');
+        }, 300);
     });
 });
 
-function moverCarruselIzquierda() {
-    carrusel.scrollBy({
-        left: -desplazamiento,
-        behavior: 'smooth'
-    });
-}
-
-function moverCarruselDerecha() {
-    carrusel.scrollBy({
-        left: desplazamiento,
-        behavior: 'smooth'
-    });
-}
-
-function manejarSuscripcion(event) {
-    event.preventDefault();
-    const emailInput = document.getElementById("correo");
-    const email = emailInput.value;
-
-    if (validateEmail(email)) {
-        alert("¡Gracias por suscribirte con el correo " + email + "!");
-        emailInput.value = '';
-    } else {
-        alert("Por favor, ingresa un correo electrónico válido.");
-    }
-}
-
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
-
-const formularioSuscripcion = document.getElementById("formulario-suscripcion");
-if (formularioSuscripcion) {
-    formularioSuscripcion.addEventListener("submit", manejarSuscripcion);
-}
+fila.addEventListener('mouseleave', () => {
+    peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+});
