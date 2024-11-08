@@ -1,64 +1,133 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas de Películas</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Agregar link a FontAwesome para las flechas si es necesario -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Reviews de Películas</title>  
+    <link rel="stylesheet" href="css/styles.css">  
+</head>  
+<body>  
+    <!-- Banner -->  
+    <div class="banner">  
+        <img src="img/banner.jpg" alt="Banner" style="width: 100%; height: auto;">  
+    </div>  
+
+    <!-- Encabezado con el menú de navegación -->  
+    <header>  
+        <nav class="menu-navegacion">  
+            <ul>  
+                <li><a href="index.html">Inicio</a></li>  
+                <li><a href="reseñas.html">Reseñas</a></li>  
+                <li><a href="novedades.html">Novedades</a></li>  
+                <li><a href="contacto.html">Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+    <!-- Barra de búsqueda -->  
+    <div class="barra-buscador">  
+        <input type="text" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">  
+        <button type="button">Buscar</button>  
+    </div>   
+
+    <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+            <h3>Películas Recomendadas</h3>
+            <div class="indicadores"></div>
+        </div>
     
-    <!-- Encabezado con el menú de navegación -->
-    <header>
-        <nav class="menu-navegacion" aria-label="Menú principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Sección de Carrusel (Películas Destacadas) -->
-    <section class="peliculas-destacadas" aria-labelledby="titulo-peliculas-destacadas">
-        <h2 id="titulo-peliculas-destacadas">Películas Destacadas</h2>
         <div class="contenedor-principal">
             <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-            
+    
             <div class="contenedor-carousel">
-                <div class="carousel" id="carousel">
-                    <!-- Aquí se van a cargar las imágenes dinámicamente -->
-                    <div class="pelicula"><a href="#"><img src="img/Deadpool_3.jpg" alt="Película 1"></a></div>
-                    <div class="pelicula"><a href="#"><img src="img/Oppenheimer.jpg" alt="Película 2"></a></div>
-                    <div class="pelicula"><a href="#"><img src="img/barbie.jpg" alt="Película 3"></a></div>
-                    <div class="pelicula"><a href="#"><img src="img/The_Exorcist_Believer.jpg" alt="Película 4"></a></div>
-                    <div class="pelicula"><a href="#"><img src="img/Wonka.jpg" alt="Película 5"></a></div>
-                    <!-- Agrega más imágenes si es necesario -->
+                <div class="carousel">
+                    <div class="pelicula">
+                        <a href="#"><img src="asset/carrusel 1.jpg" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="asset/carrusel 2.jpg" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="asset/carrusel 3.jpg" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="asset/carrusel 4.jpg" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="asset/carrusel 5.jpg" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/6.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/7.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/1.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/2.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/3.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/1.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/2.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/3.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/4.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/5.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/6.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/7.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/1.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/2.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/3.png" alt=""></a>
+                    </div>
+                    <div class="pelicula">
+                        <a href="#"><img src="img/4.png" alt=""></a>
+                    </div>
                 </div>
             </div>
-
+    
             <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
-    </section>
+    </div>
+    
 
-    <!-- Sección de Suscripción a Novedades -->
-    <section class="suscripcion" aria-labelledby="titulo-suscripcion">
-        <h2 id="titulo-suscripcion">¡No te pierdas las novedades!</h2>
-        <form id="formularioSuscripcion" onsubmit="return manejarSuscripcion(event);">
-            <label for="correo" class="visually-hidden">Correo electrónico</label>
-            <input type="email" id="correo" placeholder="Introduce tu correo electrónico" required aria-describedby="titulo-suscripcion">
-            <button type="submit">Suscribirme</button>
-        </form>
-    </section>
+    <!-- Sección de Suscripción a Novedades -->  
+    <section class="suscripcion">  
+        <h2>¡Suscríbete a nuestras novedades!</h2>  
+        <form id="formSuscripcion" onsubmit="return manejarSuscripcion(event);">  
+            <input type="email" placeholder="Introduce tu correo electrónico" required>  
+            <button type="submit">Suscribirme</button>  
+        </form>  
+    </section>  
 
-    <!-- Pie de página -->
-    <footer>
-        <p>© 2024 Reseñas de Películas. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Pie de página -->  
+    <footer>  
+        <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>  
+    </footer>  
 
-    <!-- Enlace al archivo JavaScript -->
-    <script src="js/main.js"></script>
-</body>
+    <!-- Enlace al archivo JavaScript -->  
+    <script src="js/main.js"></script>  
+</body>  
 </html>
+

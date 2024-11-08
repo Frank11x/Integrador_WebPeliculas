@@ -1,177 +1,223 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+/* Estilos generales */  
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    flex-direction: column; /* Permitir que el footer siempre esté al final */  
+    height: 100vh; /* Altura total de la ventana de visualización */  
+}  
+
+/* Estilos del encabezado y menú de navegación */  
+header {  
+    background-color: black; /* Fondo negro para el menú */  
+    color: white; /* Color blanco para el texto */  
+    padding: 10px 0; /* Espaciado superior e inferior */  
+}  
+
+.menu-navegacion ul {  
+    list-style-type: none; /* Quita los puntos de la lista */  
+    padding: 0; /* Quita el padding */  
+    margin: 0; /* Quita el margin */  
+    display: flex; /* Muestra los elementos en fila */  
+    justify-content: center; /* Centra los elementos horizontalmente */  
+}  
+
+.menu-navegacion li {  
+    margin: 0 20px; /* Espaciado entre elementos del menú */  
+}  
+
+.menu-navegacion a {  
+    color: white; /* Color blanco para los enlaces */  
+    text-decoration: none; /* Quita el subrayado */  
+    font-weight: bold; /* Letras en negrita */  
+}  
+
+.menu-navegacion a:hover {  
+    text-decoration: underline; /* Subrayado cuando se pasa el puntero */  
+}  
+
+/* Estilos de la barra de búsqueda */  
+.barra-buscador {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 15px; /* Espaciado interno */  
+    text-align: center; /* Centra el contenido */  
+    margin: 0; /* Quita el margen para que no haya espacio inferior */  
+}  
+
+/* Estilos de las películas destacadas */  
+.peliculas-destacadas {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 200px; /* Espaciado interno */  
+    margin: 0; /* Quita el margen para que no haya espacio superior */  
+    text-align: center; /* Centra el contenido */  
+}  
+
+/* Estilos de la sección de suscripción */  
+.suscripcion {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    border-top: 2px solid black; /* Línea negra que corta la sección */  
+    padding: 20px; /* Espaciado interno */  
+    text-align: center; /* Centra el contenido */  
+}  
+
+/* Estilos para el pie de página */  
+footer {  
+    text-align: center;  
+    padding: 10px 0;  
+    background-color: black; /* Fondo negro para el pie de página */  
+    color: white; /* Color blanco para el texto */  
+}  
+
+/* Nuevo contenedor para el mensaje de error */  
+.contenedor-mensaje-error {  
+    background-color: #ADD8E6; /* Fondo azul claro */  
+    padding: 250px 20px; /* Espaciado interno */  
+    margin: 0 30px; /* con margen a los costados*/ 
+    text-align: center; /* Centrar contenido */  
+}  
+
+/* Estilos para el mensaje de error en la búsqueda */  
+.mensaje-error {  
+    border: 2px solid red; /* Borde rojo */  
+    color: red; /* Texto en rojo */  
+    padding: 20px; /* Espaciado interno */  
+    margin: 0 30px; /* con margen a los costados*/ 
+    text-align: center; /* Centrar contenido */  
+}
+/* ---- ----- ----- Carrusel ----- ----- ----- */
+.peliculas-recomendadas {
+    margin-bottom: 10px; /* Ajustado para mover más arriba */
 }
 
-/* Menú de navegación */
-header {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-}
-
-.menu-navegacion ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.menu-navegacion li {
-    margin: 0 20px;
-}
-
-.menu-navegacion a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-navegacion a:hover {
-    text-decoration: underline;
-}
-
-/* Películas destacadas y carrusel */
-.peliculas-destacadas {
-    background-color: #ADD8E6;
-    padding: 50px;
-    margin: 0;
-    text-align: center;
-}
-
-.peliculas-destacadas .contenedor-principal {
+.peliculas-recomendadas .contenedor-principal {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
+    justify-content: center; /* Centra el contenedor principal */
 }
 
-.peliculas-destacadas .contenedor-carousel {
-    width: 70%;
-    padding: 10px 0;
+.peliculas-recomendadas .contenedor-carousel {
+    width: 50%; /* Ancho reducido a 50% */
+    padding: 10px 0; /* Ajustado */
     overflow: hidden;
-    background: transparent;
+    scroll-behavior: smooth;
+    background: transparent; /* Sin fondo */
 }
 
-.peliculas-destacadas .flecha-izquierda, .peliculas-destacadas .flecha-derecha {
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.3);
-    font-size: 1.4em;
+    font-size: 1.4em; /* Tamaño adaptable */
     height: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Centrado vertical */
+    width: 30px; /* Ajustado para menos ancho */
     color: #fff;
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
-    outline: none;
 }
 
-.peliculas-destacadas .flecha-izquierda:hover, .peliculas-destacadas .flecha-derecha:hover {
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
     background: rgba(0, 0, 0, .9);
 }
 
-.peliculas-destacadas .flecha-izquierda {
-    left: 10px;
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 305px; /* Distancia desde el borde ajustada */
 }
 
-.peliculas-destacadas .flecha-derecha {
-    right: 10px;
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 305px; /* Distancia desde el borde ajustada */
 }
 
-.peliculas-destacadas .contenedor-carousel .carousel {
+.peliculas-recomendadas .contenedor-carousel .carousel {
     display: flex;
     flex-wrap: nowrap;
-    transition: transform 0.5s ease;
 }
 
-.peliculas-destacadas .contenedor-carousel .carousel .pelicula {
-    flex: 1 0 20%;
-    margin: 0 5px;
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+    flex: 1 0 30%; /* Mostrar 3 películas */
+    transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
-    overflow: hidden; /* Agregado para evitar desbordamientos */
+    margin: 0 5px; /* Espacio entre películas reducido */
 }
 
-.peliculas-destacadas .contenedor-carousel .carousel .pelicula img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
 }
 
-/* Media queries */
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 50%;
+    height: 100%; /* Mantener proporción de imagen */
+    vertical-align: top;
+}
+
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%; /* Ajustado al tamaño del carrusel */
+    margin: 0 auto; /* Centra el título */
+}
+
+.contenedor-titulo-controles h3 {
+    color: #000000;
+    font-size: 24px; /* Ajustar el tamaño del título */
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 8px; /* Ajustado para que sea más pequeño */
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: red;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
-    .peliculas-destacadas .contenedor-carousel {
+    .peliculas-recomendadas .contenedor-carousel {
         overflow: visible;
-        width: 90%;
+        width: 20%; /* Ajustar el ancho para pantallas más pequeñas */
     }
 
-    .peliculas-destacadas .contenedor-carousel .carousel {
+    .peliculas-recomendadas .contenedor-carousel .carousel {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 10px; /* Ajustado */
     }
 
-    .peliculas-destacadas .flecha-izquierda, .peliculas-destacadas .flecha-derecha {
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha {
         display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .peliculas-destacadas .contenedor-carousel .carousel .pelicula {
-        flex: 1 0 40%;
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+        flex: 1 0 40%; /* Ajustar a 40% en pantallas pequeñas */
+    }
+
+    .contenedor-titulo-controles h3 {
+        font-size: 20px; /* Ajustar el tamaño del título para pantallas pequeñas */
     }
 }
-
-/* Sección de suscripción */
-.suscripcion {
-    padding: 20px;
-    text-align: center;
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+    margin: 0; /* Elimina cualquier margen */
 }
 
-.suscripcion h2 {
-    margin-bottom: 10px;
-}
 
-.suscripcion form {
-    display: inline-flex;
-    align-items: center; /* Centra el botón y el input verticalmente */
-    gap: 10px; /* Espacio entre el input y el botón */
-}
-
-.suscripcion input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex: 1; /* Permite al input ajustarse según el espacio */
-    max-width: 300px;
-}
-
-.suscripcion button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #555;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.suscripcion button:hover {
-    background-color: #777;
-}
-
-/* Pie de página */
-footer {
-    color: white;
-    text-align: center;
-    font-size: 0.8rem; /* Hace la fuente más pequeña */
-    margin-top: 10px;
-}
