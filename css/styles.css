@@ -130,18 +130,19 @@ header {
     }
 }
 
-//* Sección de suscripción */
+/* Sección de suscripción */
 .suscripcion {
-    background-color: #000; /* Fondo negro */
-    color: white;
     padding: 20px;
     text-align: center;
-    margin: 0; /* Quita cualquier margen adicional */
+}
+
+.suscripcion h2 {
+    margin-bottom: 10px;
 }
 
 .suscripcion form {
     display: inline-flex;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center; /* Centra el botón y el input verticalmente */
     gap: 10px; /* Espacio entre el input y el botón */
 }
 
@@ -149,14 +150,14 @@ header {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex: 1; /* Permite al input ajustarse al espacio disponible */
-    max-width: 300px; /* Puedes ajustar el ancho máximo */
+    flex: 1; /* Permite al input ajustarse según el espacio */
+    max-width: 300px;
 }
 
 .suscripcion button {
     padding: 10px 20px;
     border: none;
-    background-color: #555; /* Color de fondo del botón */
+    background-color: #555;
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -164,15 +165,13 @@ header {
 }
 
 .suscripcion button:hover {
-    background-color: #777; /* Color de fondo del botón al pasar el mouse */
+    background-color: #777;
 }
 
 /* Pie de página */
 footer {
-    background-color: #000; /* Fondo negro */
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    font-size: 0.8rem; /* Hace la fuente más pequeña */
+    margin-top: 10px;
 }
-
