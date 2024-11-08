@@ -1,132 +1,117 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Reviews de Películas</title>  
-    <link rel="stylesheet" href="css/styles.css">  
-</head>  
-<body>  
-    <!-- Banner -->  
-    <div class="banner">  
-        <img src="img/banner.jpg" alt="Banner" style="width: 100%; height: auto;">  
-    </div>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Películas - Estilo Netflix</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
 
-    <!-- Encabezado con el menú de navegación -->  
-    <header>  
-        <nav class="menu-navegacion">  
-            <ul>  
-                <li><a href="index.html">Inicio</a></li>  
-                <li><a href="Catalogo.html">Catálgo</a></li>  
-                <li><a href="contacto.html">Contacto</a></li>  
-            </ul>  
-        </nav>  
-    </header>  
+                <li><a href="suscripcion.html">Suscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Barra de búsqueda -->  
-    <div class="barra-buscador">  
-        <input type="text" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">  
-        <button type="button">Buscar</button>  
-    </div>   
+    <main>
+        <h1>Reseñas de Películas</h1>
 
-    <div class="peliculas-recomendadas contenedor">
-        <div class="contenedor-titulo-controles">
-            <h3>Películas Recomendadas</h3>
-            <div class="indicadores"></div>
-        </div>
-    
-        <div class="contenedor-principal">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-    
-            <div class="contenedor-carousel">
-                <div class="carousel">
-                    <div class="pelicula">
-                        <a href="#"><img src="asset/carrusel 1.jpg" alt=""></a>
+
+        <!-- Carrusel de Películas -->
+        <div class="carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-container">
+                <div class="slides">
+                    <div class="slide">
+                        <a href="articulo.html?id=5"><img src="asset/carrusel 1.jpg" alt="Película 1">
+                        </a>
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="asset/carrusel 2.jpg" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 2.jpg" alt="Película 2">
+        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="asset/carrusel 3.jpg" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 3.jpg" alt="Película 3">
+                     
+            
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="asset/carrusel 4.jpg" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                    
+                        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="asset/carrusel 5.jpg" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                    
+                        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/6.png" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                    
+                        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/7.png" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                    
+                        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/1.png" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4">
+                    
+                        
                     </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/2.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/3.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/1.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/2.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/3.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/4.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/5.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/6.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/7.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/1.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/2.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/3.png" alt=""></a>
-                    </div>
-                    <div class="pelicula">
-                        <a href="#"><img src="img/4.png" alt=""></a>
+                    <div class="slide">
+                        <img src="asset/carrusel 4.jpg" alt="Película 4"> 
                     </div>
                 </div>
             </div>
-    
-            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-    </div>
-    
 
-    <!-- Sección de Suscripción a Novedades -->
-<section class="suscripcion">
-    <h2>¡No te pierdas las novedades!</h2>
-    <form id="formulario-suscripcion" onsubmit="return manejarSuscripcion(event);">
-        <input type="email" id="correo" placeholder="Introduce tu correo electrónico" required>
-        <button type="submit">Suscribirme</button>
-    </form>
-</section>
+        <!-- Lista de Películas Disponibles -->
+        <h2>Películas Disponibles</h2>
+        <div class="movies-list" id="movies-list">
+            <div class="movie">
+                <a href="articulo.html?id=1">
+                    <img src="img/Oppenheimer.jpg" alt="Película A">
+                    <h4>Oppenheimer</h4>
+               
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=2">
+                    <img src="img/barbie.jpg" alt="Película B">
+                    <h4>Barbie</h4>
+           
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=3">
+                    <img src="img/guardianes.jpg" alt="Película C">
+                    <h4>Guardianes de la galaxia Vol. 3</h4>
+             
+                </a>
+            </div>
+            <div class="movie">
+                <a href="articulo.html?id=4">
+                    <img src="img/john_wick.jpg" alt="Película D">
+                    <h4>John Wick 4
+                    </h4>
+              
+                </a>
+            </div>
+        </div>
+    </main>
 
-<!-- Pie de página -->
-<footer>
-    <p>© 2024 Reviews de Películas. Todos los derechos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2023 MiRevisión - Todas las películas reseñadas son propiedad de sus respectivos dueños.</p>
+    </footer>
 
-<!-- Enlace al archivo JavaScript -->
-<script src="js/main.js"></script> 
-</body>  
+    <script src="js/main.js"></script>
+</body>
 </html>
-
