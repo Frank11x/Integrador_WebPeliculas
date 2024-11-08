@@ -48,11 +48,82 @@
     },
     {
         "id": "6",
-        "nombre": "",
-        "portada": "",
+        "nombre": "Intensa-mente 2",
+        "portada": "img/elemental-694000259-large.jpg",
         "genero": ["Ciencia Ficción", "Aventura"],
         "elenco": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
         "trailer": "https://link_al_trailer.com/dune2",
         "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
-    }
+        
+    },
+    {
+        "id": "7",
+        "nombre": "Deadpool & Wolverine",
+        "portada": "img/carrusel 3.jpg",
+        "genero": ["Ciencia Ficción", "Aventura"],
+        "elenco": ["Shawn Levy, Rhett Reese, Ryan Reynolds, Zeb Wells, Paul Wernick. Personaje: Rob Liefeld, Fabian Nicieza"],
+        "trailer": "https://link_al_trailer.com/dune2",
+        "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+        
+    },
+    {
+        "id": "8",
+        "nombre": "Duna: Parte dos",
+        "portada": "img/dune_part_two-802143593-large.jpg",
+        "genero": ["Ciencia Ficción", "Aventura"],
+        "elenco": ["Denis Villeneuve, Jon Spaihts, Novela: Frank Herbert"],
+        "trailer": "https://link_al_trailer.com/dune2",
+        "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+        
+},
+{
+    "id": "9",
+    "nombre": "Flash",
+    "portada": "img/the_flash-205686824-large.jpg",
+    "genero": ["DC Comics, DC Entertainment, Warner Bros"],
+    "elenco": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
+    "trailer": "https://link_al_trailer.com/dune2",
+    "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+    
+},
+{
+    "id": "10",
+    "nombre": "Wonka",
+    "portada": "img/wonka-476523968-large.jpg",
+    "genero": ["Musical, Aventuras, Fantástico, Comedia"],
+    "elenco": ["Simon Farnaby, Paul King, Personaje: Roald Dahl"],
+    "trailer": "https://link_al_trailer.com/dune2",
+    "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+    
+},
+{
+    "id": "11",
+    "nombre": "El exorcista del papa",
+    "portada": "img/the_pope_s_exorcist-660382735-large.jpg",
+    "genero": ["Género, Terror, Biográfico, Religión, Posesiones, Exorcismos"],
+    "elenco": ["Julius Avery"],
+    "trailer": "https://link_al_trailer.com/dune2",
+    "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+    
+},
+{
+    "id": "12",
+    "nombre": "Elementos",
+    "portada": "img/elemental-694000259-large.jpg",
+    "genero": ["Animación, Aventuras, Romance, Fantástico, Comedia, Drama"],
+    "elenco": ["John Hoberg, Kat Likkel, Brenda Hsueh. Historia: Peter Sohn, John Hoberg, Kat Likkel, Brenda Hsueh"],
+    "trailer": "https://link_al_trailer.com/dune2",
+    "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+    
+},
+{
+    "id": "13",
+    "nombre": "Kung Fu Panda 4",
+    "portada": "img/kung_fu_panda_4-159494298-large.jpg",
+    "genero": ["Animación, Comedia, Acción, Artes marciales, Secuela"],
+    "elenco": ["Mike Mitchell, Stephanie Stine"],
+    "trailer": "https://link_al_trailer.com/dune2",
+    "sinopsis": "La continuación de la lucha por el control de Arrakis y su especia."
+    
+}
 ]

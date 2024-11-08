@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de la Película</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Artículo - Detalle de la Película</title>
+    <link rel="stylesheet" href="css/articulo.css">
 </head>
+
 <body>
     <!-- Encabezado con el menú de navegación -->
     <header>
@@ -18,9 +20,9 @@
         </nav>
     </header>
 
-    <!-- Sección de Detalle de la Película -->
-    <div class="detalle-pelicula">
-        <div class="contenedor-detalle">
+    <!-- Sección de Artículo (Detalle de la Película) -->
+    <div class="articulo-pelicula">
+        <div class="contenedor-articulo">
             <!-- Portada de la película -->
             <div class="portada">
                 <img id="portadaPelicula" src="" alt="Portada de la Película" style="width: 100%; height: auto;">
@@ -59,12 +61,12 @@
         <p>&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JavaScript para cargar datos de la película desde un JSON -->
+    <!-- JavaScript para cargar datos de la película desde el JSON -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const movieId = urlParams.get('id'); // Suponiendo que pasamos un ID de película en la URL
 
-        fetch('js/peliculas.json')
+        fetch('js/peliculas.json') // Aquí es donde deberías tener tu archivo JSON de películas
             .then(respuesta => respuesta.json())
             .then(datos => {
                 const pelicula = datos.find(p => p.id === movieId);
@@ -106,4 +108,5 @@
         }
     </script>
 </body>
+
 </html>
