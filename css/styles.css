@@ -8,7 +8,7 @@ body {
     height: 100vh;
 }
 
-/* Estilos del encabezado y menú de navegación */
+/* Menú de navegación */
 header {
     background-color: black;
     color: white;
@@ -37,65 +37,19 @@ header {
     text-decoration: underline;
 }
 
-/* Barra de búsqueda */
-.barra-buscador {
-    background-color: #ADD8E6;
-    padding: 15px;
-    text-align: center;
-    margin: 0;
-}
-
-/* Sección de películas destacadas */
+/* Películas destacadas y carrusel */
 .peliculas-destacadas {
     background-color: #ADD8E6;
-    padding: 200px;
+    padding: 50px;
     margin: 0;
     text-align: center;
-}
-
-/* Sección de suscripción */
-.suscripcion {
-    background-color: #ADD8E6;
-    border-top: 2px solid black;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: black;
-    color: white;
-}
-
-/* Contenedor para el mensaje de error */
-.contenedor-mensaje-error {
-    background-color: #ADD8E6;
-    padding: 250px 20px;
-    margin: 0 30px;
-    text-align: center;
-}
-
-/* Estilos para el mensaje de error */
-.mensaje-error {
-    border: 2px solid red;
-    color: red;
-    padding: 20px;
-    margin: 0 30px;
-    text-align: center;
-}
-
-/* ---- ----- ----- Carrusel ----- ----- ----- */
-.peliculas-destacadas {
-    margin-bottom: 10px;
 }
 
 .peliculas-destacadas .contenedor-principal {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .peliculas-destacadas .contenedor-carousel {
@@ -105,8 +59,7 @@ footer {
     background: transparent;
 }
 
-.peliculas-destacadas .contenedor-principal .flecha-izquierda,
-.peliculas-destacadas .contenedor-principal .flecha-derecha {
+.peliculas-destacadas .flecha-izquierda, .peliculas-destacadas .flecha-derecha {
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.3);
@@ -119,18 +72,18 @@ footer {
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
+    outline: none;
 }
 
-.peliculas-destacadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-destacadas .contenedor-principal .flecha-derecha:hover {
+.peliculas-destacadas .flecha-izquierda:hover, .peliculas-destacadas .flecha-derecha:hover {
     background: rgba(0, 0, 0, .9);
 }
 
-.peliculas-destacadas .contenedor-principal .flecha-izquierda {
+.peliculas-destacadas .flecha-izquierda {
     left: 10px;
 }
 
-.peliculas-destacadas .contenedor-principal .flecha-derecha {
+.peliculas-destacadas .flecha-derecha {
     right: 10px;
 }
 
@@ -141,22 +94,23 @@ footer {
 }
 
 .peliculas-destacadas .contenedor-carousel .carousel .pelicula {
-    flex: 1 0 30%;
+    flex: 1 0 20%;
     margin: 0 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    overflow: hidden; /* Agregado para evitar desbordamientos */
 }
 
 .peliculas-destacadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
 }
 
-/* ---- ----- ----- Media Queries ----- ----- ----- */
+/* Media queries */
 @media screen and (max-width: 800px) {
     .peliculas-destacadas .contenedor-carousel {
         overflow: visible;
-        width: 90%; /* Ajuste de ancho para pantallas pequeñas */
+        width: 90%;
     }
 
     .peliculas-destacadas .contenedor-carousel .carousel {
@@ -165,14 +119,60 @@ footer {
         gap: 10px;
     }
 
-    .peliculas-destacadas .flecha-izquierda,
-    .peliculas-destacadas .flecha-derecha {
-        display: none; /* Ocultar flechas en pantallas pequeñas */
+    .peliculas-destacadas .flecha-izquierda, .peliculas-destacadas .flecha-derecha {
+        display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
     .peliculas-destacadas .contenedor-carousel .carousel .pelicula {
-        flex: 1 0 40%; /* Ajuste a 40% en pantallas más pequeñas */
+        flex: 1 0 40%;
     }
 }
+
+//* Sección de suscripción */
+.suscripcion {
+    background-color: #000; /* Fondo negro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0; /* Quita cualquier margen adicional */
+}
+
+.suscripcion form {
+    display: inline-flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 10px; /* Espacio entre el input y el botón */
+}
+
+.suscripcion input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1; /* Permite al input ajustarse al espacio disponible */
+    max-width: 300px; /* Puedes ajustar el ancho máximo */
+}
+
+.suscripcion button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #555; /* Color de fondo del botón */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suscripcion button:hover {
+    background-color: #777; /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Pie de página */
+footer {
+    background-color: #000; /* Fondo negro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+

@@ -30,17 +30,27 @@
             <div class="contenedor-carousel">
                 <div class="carousel" id="carousel">
                     <!-- Aquí se van a cargar las imágenes dinámicamente -->
-                    <div class="pelicula"><a href="#"><img src="asset/carrusel 1.jpg" alt="Película 1"></a></div>
-                    <div class="pelicula"><a href="#"><img src="asset/carrusel 2.jpg" alt="Película 2"></a></div>
-                    <div class="pelicula"><a href="#"><img src="asset/carrusel 3.jpg" alt="Película 3"></a></div>
-                    <div class="pelicula"><a href="#"><img src="asset/carrusel 4.jpg" alt="Película 4"></a></div>
-                    <div class="pelicula"><a href="#"><img src="asset/carrusel 5.jpg" alt="Película 5"></a></div>
+                    <div class="pelicula"><a href="#"><img src="img/Deadpool_3.jpg" alt="Película 1"></a></div>
+                    <div class="pelicula"><a href="#"><img src="img/Oppenheimer.jpg" alt="Película 2"></a></div>
+                    <div class="pelicula"><a href="#"><img src="img/barbie.jpg" alt="Película 3"></a></div>
+                    <div class="pelicula"><a href="#"><img src="img/The_Exorcist_Believer.jpg" alt="Película 4"></a></div>
+                    <div class="pelicula"><a href="#"><img src="img/Wonka.jpg" alt="Película 5"></a></div>
                     <!-- Agrega más imágenes si es necesario -->
                 </div>
             </div>
 
             <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
+    </section>
+
+    <!-- Sección de Suscripción a Novedades -->
+    <section class="suscripcion" aria-labelledby="titulo-suscripcion">
+        <h2 id="titulo-suscripcion">¡No te pierdas las novedades!</h2>
+        <form id="formularioSuscripcion" onsubmit="return manejarSuscripcion(event);">
+            <label for="correo" class="visually-hidden">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="Introduce tu correo electrónico" required aria-describedby="titulo-suscripcion">
+            <button type="submit">Suscribirme</button>
+        </form>
     </section>
 
     <!-- Pie de página -->

@@ -1,55 +1,63 @@
-// --------------------- Carrusel -----------------------------
-// Variables del carrusel
+// Carrusel
 const carrusel = document.getElementById('carousel');
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
 
-// Número de desplazamientos por clic
-const numeroPeliculas = document.querySelectorAll('.pelicula').length;
-const peliculasVisibles = 5; // Por ejemplo, mostrar 5 películas a la vez en el carrusel
+let desplazamiento;
+let peliculasVisibles = 5;
 
-// Calcular el ancho total del carrusel
-const anchoCarrusel = carrusel.offsetWidth;
-const anchoPelicula = document.querySelector('.pelicula').offsetWidth;
-const totalAnchoCarrusel = anchoPelicula * numeroPeliculas;
+document.addEventListener('DOMContentLoaded', () => {
+    const peliculas = document.querySelectorAll('.pelicula');
+    if (peliculas.length === 0) {
+        console.error("No hay películas disponibles en el carrusel.");
+        return;
+    }
 
-// Función para mover el carrusel hacia la izquierda
+    const anchoPelicula = peliculas[0].offsetWidth;
+    desplazamiento = anchoPelicula * peliculasVisibles;
+
+    flechaIzquierda.addEventListener('click', moverCarruselIzquierda);
+    flechaDerecha.addEventListener('click', moverCarruselDerecha);
+
+    window.addEventListener('resize', () => {
+        const nuevoAnchoPelicula = peliculas[0].offsetWidth;
+        desplazamiento = nuevoAnchoPelicula * peliculasVisibles;
+    });
+});
+
 function moverCarruselIzquierda() {
     carrusel.scrollBy({
-        left: -anchoPelicula * peliculasVisibles, // Desplazar hacia la izquierda por el ancho de las películas visibles
-        behavior: 'smooth' // Desplazamiento suave
+        left: -desplazamiento,
+        behavior: 'smooth'
     });
 }
 
-// Función para mover el carrusel hacia la derecha
 function moverCarruselDerecha() {
     carrusel.scrollBy({
-        left: anchoPelicula * peliculasVisibles, // Desplazar hacia la derecha por el ancho de las películas visibles
-        behavior: 'smooth' // Desplazamiento suave
+        left: desplazamiento,
+        behavior: 'smooth'
     });
 }
 
-// Event listeners para las flechas
-flechaIzquierda.addEventListener('click', moverCarruselIzquierda);
-flechaDerecha.addEventListener('click', moverCarruselDerecha);
-// -----------------------------------------------------------------
-
-// Manejar la suscripción
 function manejarSuscripcion(event) {
-    event.preventDefault(); // Evitar el envío del formulario
-    const emailInput = document.getElementById("correo"); // Asegúrate de que el ID coincida con el HTML
+    event.preventDefault();
+    const emailInput = document.getElementById("correo");
     const email = emailInput.value;
 
     if (validateEmail(email)) {
         alert("¡Gracias por suscribirte con el correo " + email + "!");
-        emailInput.value = ''; // Limpiar el campo
+        emailInput.value = '';
     } else {
         alert("Por favor, ingresa un correo electrónico válido.");
     }
 }
 
-// Validar el formato del correo electrónico
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
+}
+
+const formularioSuscripcion = document.getElementById("formulario-suscripcion");
+if (formularioSuscripcion) {
+    formularioSuscripcion.addEventListener("submit", manejarSuscripcion);
 }
