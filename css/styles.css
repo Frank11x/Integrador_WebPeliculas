@@ -1,230 +1,178 @@
 /* Estilos generales */
-body {  
-    font-family: Arial, sans-serif;  /* Define la fuente principal para el texto */
-    margin: 0;                       /* Elimina el margen exterior del cuerpo de la página */
-    padding: 0;                      /* Elimina el relleno interno del cuerpo de la página */
-    display: flex;                   /* Configura el cuerpo como un contenedor flexible */
-    flex-direction: column;          /* Coloca los elementos hijos en una columna */
-    height: 100vh;                   /* Ajusta la altura del cuerpo al 100% de la ventana */
-}  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 /* Estilos del encabezado y menú de navegación */
-header {  
-    background-color: black;         /* Color de fondo del encabezado */
-    color: white;                    /* Color del texto en el encabezado */
-    padding: 10px 0;                 /* Rellena la parte superior e inferior del encabezado */
-}  
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
 
-.menu-navegacion ul {  
-    list-style-type: none;           /* Elimina el estilo de viñeta en la lista */
-    padding: 0;                      /* Elimina el relleno interno del menú */
-    margin: 0;                       /* Elimina el margen del menú */
-    display: flex;                   /* Coloca los elementos del menú en una fila */
-    justify-content: center;         /* Centra los elementos del menú horizontalmente */
-}  
+.menu-navegacion ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-.menu-navegacion li {  
-    margin: 0 20px;                  /* Agrega espacio entre cada elemento del menú */
-}  
+.menu-navegacion li {
+    margin: 0 20px;
+}
 
-.menu-navegacion a {  
-    color: white;                    /* Define el color del texto de los enlaces del menú */
-    text-decoration: none;           /* Elimina el subrayado en los enlaces */
-    font-weight: bold;               /* Hace que el texto de los enlaces sea negrita */
-}  
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-.menu-navegacion a:hover {  
-    text-decoration: underline;      /* Subraya el texto de los enlaces al pasar el mouse */
-}  
+.menu-navegacion a:hover {
+    text-decoration: underline;
+}
 
 /* Barra de búsqueda */
-.barra-buscador {  
-    background-color: #ADD8E6;       /* Define el color de fondo de la barra de búsqueda */
-    padding: 15px;                   /* Agrega relleno alrededor del contenido de la barra */
-    text-align: center;              /* Centra el contenido de la barra de búsqueda */
-    margin: 0;                       /* Elimina el margen exterior de la barra */
-}  
+.barra-buscador {
+    background-color: #ADD8E6;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+}
 
 /* Sección de películas destacadas */
-.peliculas-destacadas {  
-    background-color: #ADD8E6;       /* Color de fondo de la sección de películas destacadas */
-    padding: 200px;                  /* Agrega un espacio grande alrededor del contenido */
-    margin: 0;                       /* Elimina el margen exterior de la sección */
-    text-align: center;              /* Centra el texto y el contenido de la sección */
-}  
+.peliculas-destacadas {
+    background-color: #ADD8E6;
+    padding: 200px;
+    margin: 0;
+    text-align: center;
+}
 
 /* Sección de suscripción */
-.suscripcion {  
-    background-color: #ADD8E6;       /* Color de fondo de la sección de suscripción */
-    border-top: 2px solid black;     /* Agrega una línea negra en la parte superior */
-    padding: 20px;                   /* Rellena la sección para separar el contenido del borde */
-    text-align: center;              /* Centra el contenido de la sección */
-}  
+.suscripcion {
+    background-color: #ADD8E6;
+    border-top: 2px solid black;
+    padding: 20px;
+    text-align: center;
+}
 
 /* Pie de página */
-footer {  
-    text-align: center;              /* Centra el texto dentro del pie de página */
-    padding: 10px 0;                 /* Agrega espacio en la parte superior e inferior */
-    background-color: black;         /* Color de fondo del pie de página */
-    color: white;                    /* Color del texto en el pie de página */
-}  
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+}
 
 /* Contenedor para el mensaje de error */
-.contenedor-mensaje-error {  
-    background-color: #ADD8E6;       /* Define el color de fondo del contenedor de error */
-    padding: 250px 20px;             /* Agrega espacio grande en todos los lados del contenedor */
-    margin: 0 30px;                  /* Agrega margen en los lados izquierdo y derecho */
-    text-align: center;              /* Centra el contenido dentro del contenedor */
-}  
+.contenedor-mensaje-error {
+    background-color: #ADD8E6;
+    padding: 250px 20px;
+    margin: 0 30px;
+    text-align: center;
+}
 
 /* Estilos para el mensaje de error */
-.mensaje-error {  
-<<<<<<< HEAD
-    border: 2px solid red;           /* Define un borde rojo alrededor del mensaje de error */
-    color: red;                      /* Color del texto del mensaje de error */
-    padding: 20px;                   /* Rellena el mensaje de error para separar el texto del borde */
-    margin: 0 30px;                  /* Agrega margen en los lados izquierdo y derecho */
-    text-align: center;              /* Centra el texto dentro del mensaje de error */
-}  
-=======
-    border: 2px solid red; /* Borde rojo */  
-    color: red; /* Texto en rojo */  
-    padding: 20px; /* Espaciado interno */  
-    margin: 0 30px; /* con margen a los costados*/ 
-    text-align: center; /* Centrar contenido */  
-}
-/* ---- ----- ----- Carrusel ----- ----- ----- */
-.peliculas-recomendadas {
-    margin-bottom: 10px; /* Ajustado para mover más arriba */
+.mensaje-error {
+    border: 2px solid red;
+    color: red;
+    padding: 20px;
+    margin: 0 30px;
+    text-align: center;
 }
 
-.peliculas-recomendadas .contenedor-principal {
+/* ---- ----- ----- Carrusel ----- ----- ----- */
+.peliculas-destacadas {
+    margin-bottom: 10px;
+}
+
+.peliculas-destacadas .contenedor-principal {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center; /* Centra el contenedor principal */
+    justify-content: center; 
 }
 
-.peliculas-recomendadas .contenedor-carousel {
-    width: 50%; /* Ancho reducido a 50% */
-    padding: 10px 0; /* Ajustado */
+.peliculas-destacadas .contenedor-carousel {
+    width: 70%;
+    padding: 10px 0;
     overflow: hidden;
-    scroll-behavior: smooth;
-    background: transparent; /* Sin fondo */
+    background: transparent;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+.peliculas-destacadas .contenedor-principal .flecha-izquierda,
+.peliculas-destacadas .contenedor-principal .flecha-derecha {
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.3);
-    font-size: 1.4em; /* Tamaño adaptable */
+    font-size: 1.4em;
     height: 50%;
-    top: 50%; /* Centrado vertical */
-    transform: translateY(-50%); /* Centrado vertical */
-    width: 30px; /* Ajustado para menos ancho */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
     color: #fff;
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+.peliculas-destacadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-destacadas .contenedor-principal .flecha-derecha:hover {
     background: rgba(0, 0, 0, .9);
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
-    left: 305px; /* Distancia desde el borde ajustada */
+.peliculas-destacadas .contenedor-principal .flecha-izquierda {
+    left: 10px;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
-    right: 305px; /* Distancia desde el borde ajustada */
+.peliculas-destacadas .contenedor-principal .flecha-derecha {
+    right: 10px;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel {
+.peliculas-destacadas .contenedor-carousel .carousel {
     display: flex;
     flex-wrap: nowrap;
+    transition: transform 0.5s ease;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
-    flex: 1 0 30%; /* Mostrar 3 películas */
-    transition: .3s ease all;
+.peliculas-destacadas .contenedor-carousel .carousel .pelicula {
+    flex: 1 0 30%;
+    margin: 0 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
-    margin: 0 5px; /* Espacio entre películas reducido */
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
-    transform: scale(1.2);
-    transform-origin: center;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-    width: 50%;
-    height: 100%; /* Mantener proporción de imagen */
-    vertical-align: top;
-}
-
-.contenedor-titulo-controles {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%; /* Ajustado al tamaño del carrusel */
-    margin: 0 auto; /* Centra el título */
-}
-
-.contenedor-titulo-controles h3 {
-    color: #000000;
-    font-size: 24px; /* Ajustar el tamaño del título */
-}
-
-.contenedor-titulo-controles .indicadores button {
-    background: #fff;
-    height: 3px;
-    width: 8px; /* Ajustado para que sea más pequeño */
-    cursor: pointer;
-    border: none;
-    margin-right: 2px;
-}
-
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
-    background: red;
+.peliculas-destacadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
-    .peliculas-recomendadas .contenedor-carousel {
+    .peliculas-destacadas .contenedor-carousel {
         overflow: visible;
-        width: 20%; /* Ajustar el ancho para pantallas más pequeñas */
+        width: 90%; /* Ajuste de ancho para pantallas pequeñas */
     }
 
-    .peliculas-recomendadas .contenedor-carousel .carousel {
+    .peliculas-destacadas .contenedor-carousel .carousel {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px; /* Ajustado */
+        gap: 10px;
     }
 
-    .peliculas-recomendadas .indicadores,
-    .peliculas-recomendadas .flecha-izquierda,
-    .peliculas-recomendadas .flecha-derecha {
-        display: none;
+    .peliculas-destacadas .flecha-izquierda,
+    .peliculas-destacadas .flecha-derecha {
+        display: none; /* Ocultar flechas en pantallas pequeñas */
     }
 }
 
 @media screen and (max-width: 500px) {
-    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
-        flex: 1 0 40%; /* Ajustar a 40% en pantallas pequeñas */
-    }
-
-    .contenedor-titulo-controles h3 {
-        font-size: 20px; /* Ajustar el tamaño del título para pantallas pequeñas */
+    .peliculas-destacadas .contenedor-carousel .carousel .pelicula {
+        flex: 1 0 40%; /* Ajuste a 40% en pantallas más pequeñas */
     }
 }
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
-    margin: 0; /* Elimina cualquier margen */
-}
->>>>>>> Lautaro
