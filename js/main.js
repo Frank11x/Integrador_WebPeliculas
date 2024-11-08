@@ -58,3 +58,26 @@ peliculas.forEach((pelicula) => {
 fila.addEventListener('mouseleave', () => {
     peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
 });
+
+function manejarSuscripcion(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById("correo");
+    const email = emailInput.value;
+
+    if (validateEmail(email)) {
+        alert("¡Gracias por suscribirte con el correo " + email + "!");
+        emailInput.value = '';
+    } else {
+        alert("Por favor, ingresa un correo electrónico válido.");
+    }
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const formularioSuscripcion = document.getElementById("formulario-suscripcion");
+if (formularioSuscripcion) {
+    formularioSuscripcion.addEventListener("submit", manejarSuscripcion);
+}
