@@ -14,8 +14,7 @@
         <nav class="menu-navegacion">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="busqueda.html">Buscar</a></li>
-                <li><a href="suscripcion.html">Suscribirse</a></li>
+                <li><a href="subscribirse .html">Suscribirse</a></li>
             </ul>
         </nav>
     </header>
@@ -54,6 +53,8 @@
             <input type="email" id="email" placeholder="Tu correo electrónico" required>
             <button type="submit">Suscribirse</button>
         </form>
+        <!-- Contenedor para el mensaje -->
+        <div id="mensajeSuscripcion" style="margin-top: 10px;"></div>
     </div>
 
     <!-- Pie de página -->
@@ -87,26 +88,53 @@
             })
             .catch(error => console.error('Error al cargar los datos de la película:', error));
 
-        // Función para manejar la suscripción
-        function manejarSuscripcion(evento) {
-            evento.preventDefault();
-            const inputCorreo = document.getElementById("email");
-            const correo = inputCorreo.value;
+                // Función para manejar la suscripción
+                function manejarSuscripcion(evento) {
+                evento.preventDefault();
+                const inputCorreo = document.getElementById("email");
+                const correo = inputCorreo.value;
+                const mensajeContenedor = document.getElementById("mensajeSuscripcion");
+                
+                // Limpiar cualquier mensaje previo
+                mensajeContenedor.innerHTML = '';
+                mensajeContenedor.className = '';
 
-            if (validarCorreo(correo)) {
-                alert("¡Gracias por suscribirte con el correo " + correo + "!");
-                inputCorreo.value = '';
-            } else {
-                alert("Por favor, ingresa un correo electrónico válido.");
+                if (validarCorreo(correo)) {
+                    // Crear mensaje de éxito
+                    const mensajeExito = document.createElement('p');
+                    mensajeExito.textContent = "¡Gracias por suscribirte con el correo " + correo + "!";
+                    mensajeExito.className = 'exito'; // Clase CSS para estilizar el mensaje
+                    mensajeContenedor.appendChild(mensajeExito);
+                    inputCorreo.value = '';
+                } else {
+                    // Crear mensaje de error
+                    const mensajeError = document.createElement('p');
+                    mensajeError.textContent = "Por favor, ingresa un correo electrónico válido.";
+                    mensajeError.className = 'error'; // Clase CSS para estilizar el mensaje
+                    mensajeContenedor.appendChild(mensajeError);
+                }
             }
-        }
 
-        // Validar el formato del correo electrónico
-        function validarCorreo(correo) {
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(String(correo).toLowerCase());
-        }
+            function validarCorreo(correo) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(String(correo).toLowerCase());
+            }
     </script>
+    <style>
+        /* Estilos para mensajes */
+        .exito {
+            color: green;
+            font-size: 1em;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
 </body>
 
 </html>
