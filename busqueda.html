@@ -12,8 +12,7 @@
         <nav class="menu-navegacion" aria-label="Menú principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="reseñas.html">Reseñas</a></li>
-                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="busqueda.html">Reseñas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -24,7 +23,7 @@
         <label for="busqueda" class="visually-hidden">Buscar en el sitio</label>
         <input type="text" id="busqueda" placeholder="Buscar películas, actores, géneros..." aria-label="Buscar">
         <button type="button" onclick="realizarBusqueda()">Buscar</button>
-    </div>   
+    </div> 
 
     <!-- Sección de Resultados de Búsqueda -->
     <section class="resultados-busqueda" aria-labelledby="titulo-resultados">
@@ -37,7 +36,7 @@
         <h2 id="titulo-suscripcion">¡Suscríbete a nuestras novedades!</h2>
         <form id="formularioSuscripcion" onsubmit="return manejarSuscripcion(event);">
             <label for="correo" class="visually-hidden">Correo electrónico</label>
-            <input type="email" id="correo" placeholder="email@example.com" required>
+            <input type="email" id="correo" placeholder="Introduce tu correo electrónico" required aria-describedby="titulo-suscripcion">
             <button type="submit">Suscribirme</button>
         </form>
     </section>

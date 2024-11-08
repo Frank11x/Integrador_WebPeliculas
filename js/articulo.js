@@ -18,9 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById('genero-pelicula').textContent = pelicula.genero.join(', '); // Convertir array a string
                 document.getElementById('elenco-pelicula').textContent = pelicula.elenco.join(', '); // Convertir array a string
                 document.getElementById('sinopsis-pelicula').textContent = pelicula.sinopsis;
+
+                // Validar que la calificación existe y no sea N/A
+                const calificacion = pelicula.calificacion !== "N/A" ? pelicula.calificacion : 'No disponible';
+                document.getElementById('calificacion-pelicula').textContent = calificacion;
+
             } else {
                 alert('No se encontró la película seleccionada.');
             }
         })
-        .catch(error => console.error('Error al cargar los datos de la película:', error));
+        .catch(error => {
+            console.error('Error al cargar los datos de la película:', error);
+            alert('Error al cargar los detalles de la película.');
+        });
 });
